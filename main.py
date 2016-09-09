@@ -1,0 +1,89 @@
+import sys
+
+import subprocess
+import multiprocessing
+import Queue
+from intersection import Intersection
+import config
+import test
+import time
+import socket
+import log
+import random
+
+port_que = Queue.Queue()
+
+
+
+INPUT_INTERSECTION = config.CompareList
+
+
+
+CoreNumber = multiprocessing.cpu_count()
+
+TestPeriod = 36000
+testRange = (1, 32)
+stepLength = 1
+
+
+def mytestWarp(tup):
+    para = tup[1]
+    idx = tup[2]
+    para[idx] = tup[0]
+    speed = subprocess.check_output(
+        ["python", "test.py", para] )#, stdout= DEVNULL, stderr = DEVNULL)
+    return (speed, tup[0])
+
+
+
+
+
+def start_process():
+    pass
+
+if __name__ == '__main__':
+    #log.LogTime = time.time()
+    #with open('logtime','w') as f:
+    #    f.write(str(log.LogTime))
+    paraList = []
+    dim = 10
+    for i in dim:
+    paraList.append(testRange[1])
+
+    idx = 0
+    while True:
+        print idx
+
+        pool = multiprocessing.Pool(processes = CoreNumber,
+                                initializer = start_process)
+        inputList = []
+
+        for i in range(testRange[0], testRange[1], stepLength):
+            inputList.append((i, paraList, idx, config.sumoMaps))
+
+        result = pool.map(mytestWarp,inputList)
+        #result = map(mytestWarp, inputList)
+        pool.close()
+        pool.join()
+
+        f = open("intersection" + str(idx) + ".txt", "w")
+        for i in result:
+            #print i[0], i[1], i[2]
+            f.write(str(i[0]) +str(i[1])  + '\n')
+
+
+
+        maxSpeed, maxThreshold = max(result, key = lambda x: x[0])
+        f.write("final:"+ str(maxSpeed) + ',' + str(maxThreshold))
+
+        #minDuration, minWeThreshold, minNsThreshold = min(result, key = lambda x: x[0])
+        #f.write("final:"+ str(minDuration) + ',' + str(minWeThreshold) + ',' + str(minNsThreshold))
+
+        paraList[idx] = maxThreshold
+        f.flush()
+        idx = (idx + 1) % dim
+        time.sleep(10)
+
+        print "sleeping at loot--------"
+
+    print paraList

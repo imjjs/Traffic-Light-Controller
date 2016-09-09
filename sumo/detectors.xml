@@ -1,0 +1,333 @@
+<additional>
+	<!--
+	<inductionLoop id="loop1a" lane="19479801#0_0" pos="16.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop1b" lane="19479801#0_1" pos="16.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop1c" lane="-19479801#0_1" pos="2938.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop1d" lane="-19479801#0_0" pos="2938.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop2a" lane="19470377#0_0" pos="16.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop2b" lane="19470377#0_1" pos="16.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop2c" lane="19470377#0_2" pos="16.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop2d" lane="-19470377#0_2" pos="28.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop2e" lane="-19470377#0_1" pos="28.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop2f" lane="-19470377#0_0" pos="28.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop3a" lane="-245915229#14_1" pos="16.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop3b" lane="-245915229#14_0" pos="16.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop3c" lane="245915229#14_0" pos="585.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop3d" lane="245915229#14_1" pos="585.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop4a" lane="120254976#0_2" pos="16.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop4b" lane="120254976#0_1" pos="16.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop4c" lane="120254976#0_0" pos="16.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop4d" lane="-120254976#0_0" pos="190.0" freq="120" file="NUL"/>
+	<inductionLoop id="loop4e" lane="-120254976#0_1" pos="190.0" freq="120" file="NUL"/>
+	<inductionLoop id="loop4f" lane="-120254976#0_2" pos="190.0" freq="120" file="NUL"/>
+	<inductionLoop id="loop5a" lane="-19468772_0" pos="16.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop5b" lane="-19468772_1" pos="16.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop5c" lane="19468772_0" pos="196.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop5d" lane="19468772_1" pos="196.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop6a" lane="-41139605#0_1" pos="224.0" freq="120" file="NUL"/>
+	<inductionLoop id="loop6b" lane="-41139605#0_0" pos="224.0" freq="120" file="NUL"/>
+	<inductionLoop id="loop6c" lane="41139605#0_1" pos="16.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop6d" lane="41139605#0_0" pos="16.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop7a" lane="19456179#2_1" pos="88.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop7b" lane="19456179#2_0" pos="88.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop7c" lane="-19456179#2_2" pos="88.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop7d" lane="-19456179#2_1" pos="88.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop7e" lane="-19456179#2_0" pos="88.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop8a" lane="-19463160#3_0" pos="70.0" freq="120" file="NUL"/>
+	<inductionLoop id="loop8b" lane="-19463160#3_1" pos="70.0" freq="120" file="NUL"/>
+	<inductionLoop id="loop8c" lane="19463160#3_0" pos="64.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop8d" lane="19463160#3_1" pos="64.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop9a" lane="-337393244#1_0" pos="100.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop9b" lane="-337393244#1_1" pos="100.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop9c" lane="-337393244#1_2" pos="100.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop9d" lane="337393244#1_2" pos="88.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop9e" lane="337393244#1_1" pos="88.5" freq="120" file="NUL"/>
+	<inductionLoop id="loop9f" lane="337393244#1_0" pos="88.5" freq="120" file="NUL"/>
+	-->
+
+	<!--   we:red, ns:green -->
+	<!--   w = 1,  e = 2, n = 3, s = 3 -->
+
+	<!--<e2Detector id="S1#0" lane="19463160#11_0" length="80" pos="55.39"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S1#1" lane="19463160#11_1" length="80" pos="55.39"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S2#0" lane="-19463160#12_0" length="80" pos="29.915"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S2#1" lane="-19463160#12_1" length="80" pos="29.915"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S3#0" lane="19479801#10_0" length="80" pos="173.96"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S3#1" lane="19479801#10_1" length="80" pos="173.96"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S4#0" lane="-19456179#0_0" length="80" pos="153.4"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S4#1" lane="-19456179#0_1" length="80" pos="153.4"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S4#2" lane="-19456179#0_2" length="80" pos="153.4"  freq="1" file="NUL" friendlyPos="true"/>-->
+
+	<entryExitDetector file="NUL" freq="1" id="S1">
+		<detEntry friendlyPos="true" lane="19463160#11_0" pos="55.39" />
+		<detExit friendlyPos="true" lane="19463160#11_0" pos="135.39" />
+		<detEntry friendlyPos="true" lane="19463160#11_1" pos="55.39" />
+		<detExit friendlyPos="true" lane="19463160#11_1" pos="135.39" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S2">
+		<detEntry friendlyPos="true" lane="-19463160#12_0" pos="29.915" />
+		<detExit friendlyPos="true" lane="-19463160#12_0" pos="109.915" />
+		<detEntry friendlyPos="true" lane="-19463160#12_1" pos="29.915" />
+		<detExit friendlyPos="true" lane="-19463160#12_1" pos="109.915" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S3">
+		<detEntry friendlyPos="true" lane="19479801#10_0" pos="173.96" />
+		<detExit friendlyPos="true" lane="19479801#10_0" pos="253.96" />
+		<detEntry friendlyPos="true" lane="19479801#10_1" pos="173.96" />
+		<detExit friendlyPos="true" lane="19479801#10_1" pos="253.96" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S4">
+		<detEntry friendlyPos="true" lane="-19456179#0_0" pos="153.4" />
+		<detExit friendlyPos="true" lane="-19456179#0_0" pos="233.4" />
+		<detEntry friendlyPos="true" lane="-19456179#0_1" pos="153.4" />
+		<detExit friendlyPos="true" lane="-19456179#0_1" pos="233.4" />
+		<detEntry friendlyPos="true" lane="-19456179#0_2" pos="153.4" />
+		<detExit friendlyPos="true" lane="-19456179#0_2" pos="233.4" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S5">
+		<detEntry friendlyPos="true" lane="19469758#3_0" pos="52.05" />
+		<detExit friendlyPos="true" lane="19469758#3_0" pos="132.05" />
+		<detEntry friendlyPos="true" lane="19469758#3_1" pos="52.05" />
+		<detExit friendlyPos="true" lane="19469758#3_1" pos="132.05" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S6">
+		<detEntry friendlyPos="true" lane="-19469820#0_0" pos="28.72" />
+		<detExit friendlyPos="true" lane="-19469820#0_0" pos="108.72" />
+		<detEntry friendlyPos="true" lane="-19469820#0_1" pos="28.72" />
+		<detExit friendlyPos="true" lane="-19469820#0_1" pos="108.72" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S7">
+		<detEntry friendlyPos="true" lane="-337393244#0_0" pos="143.13" />
+		<detExit friendlyPos="true" lane="-337393244#0_0" pos="223.13" />
+		<detEntry friendlyPos="true" lane="-337393244#0_1" pos="143.13" />
+		<detExit friendlyPos="true" lane="-337393244#0_1" pos="223.13" />
+		<detEntry friendlyPos="true" lane="-337393244#0_2" pos="143.13" />
+		<detExit friendlyPos="true" lane="-337393244#0_2" pos="223.13" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S8">
+		<detEntry friendlyPos="true" lane="337402032_0" pos="77.31" />
+		<detExit friendlyPos="true" lane="337402032_0" pos="157.31" />
+		<detEntry friendlyPos="true" lane="337402032_1" pos="77.31" />
+		<detExit friendlyPos="true" lane="337402032_1" pos="157.31" />
+		<detEntry friendlyPos="true" lane="337402032_2" pos="77.31" />
+		<detExit friendlyPos="true" lane="337402032_2" pos="157.31" />
+	</entryExitDetector>
+	
+	<!--<e2Detector id="S9#0" lane="-337393244#5_0" length="80" pos="135.67"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S9#1" lane="-337393244#5_1" length="80" pos="135.67"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S9#2" lane="-337393244#5_2" length="80" pos="135.67"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S10#0" lane="337393244#4_0" length="80" pos="146.67"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S10#1" lane="337393244#4_1" length="80" pos="146.67"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S10#2" lane="337393244#4_2" length="80" pos="146.67"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S11#0" lane="19482278#5_0" length="80" pos="62.93"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S11#1" lane="19482278#5_1" length="80" pos="62.93"  freq="1" file="NUL" friendlyPos="true"/>-->
+
+	<entryExitDetector file="NUL" freq="1" id="S9">
+		<detEntry friendlyPos="true" lane="-337393244#5_0" pos="135.67" />
+		<detExit friendlyPos="true" lane="-337393244#5_0" pos="215.67" />
+		<detEntry friendlyPos="true" lane="-337393244#5_1" pos="135.67" />
+		<detExit friendlyPos="true" lane="-337393244#5_1" pos="215.67" />
+		<detEntry friendlyPos="true" lane="-337393244#5_2" pos="135.67" />
+		<detExit friendlyPos="true" lane="-337393244#5_2" pos="215.67" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S10">
+		<detEntry friendlyPos="true" lane="337393244#4_0" pos="146.56" />
+		<detExit friendlyPos="true" lane="337393244#4_0" pos="226.56" />
+		<detEntry friendlyPos="true" lane="337393244#4_1" pos="146.56" />
+		<detExit friendlyPos="true" lane="337393244#4_1" pos="226.56" />
+		<detEntry friendlyPos="true" lane="337393244#4_2" pos="146.56" />
+		<detExit friendlyPos="true" lane="337393244#4_2" pos="226.56" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S11">
+		<detEntry friendlyPos="true" lane="19482278#5_0" pos="62.93" />
+		<detExit friendlyPos="true" lane="19482278#5_0" pos="146.93" />
+		<detEntry friendlyPos="true" lane="19482278#5_1" pos="62.93" />
+		<detExit friendlyPos="true" lane="19482278#5_1" pos="146.93" />
+	</entryExitDetector>
+	
+	<!--<e2Detector id="S12#0" lane="-120254976#6_0" length="80" pos="72.26"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S12#1" lane="-120254976#6_1" length="80" pos="72.26"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S12#2" lane="-120254976#6_2" length="80" pos="72.26"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S13#0" lane="120254976#5_0" length="80" pos="33.755"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S13#1" lane="120254976#5_1" length="80" pos="33.755"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S13#2" lane="120254976#5_2" length="80" pos="33.755"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S14#0" lane="-19485812#0_0" length="80" pos="110.43"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S14#1" lane="-19485812#0_1" length="80" pos="110.43"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S15#0" lane="-19485718_0" length="80" pos="48.56"  freq="1" file="NUL" friendlyPos="true"/>-->
+	
+	
+	<entryExitDetector file="NUL" freq="1" id="S12">
+		<detEntry friendlyPos="true" lane="-120254976#6_0" pos="72.26" />
+		<detExit friendlyPos="true" lane="-120254976#6_0" pos="152.26" />
+		<detEntry friendlyPos="true" lane="-120254976#6_1" pos="72.26" />
+		<detExit friendlyPos="true" lane="-120254976#6_1" pos="152.26" />
+		<detEntry friendlyPos="true" lane="-120254976#6_2" pos="72.26" />
+		<detExit friendlyPos="true" lane="-120254976#6_2" pos="152.26" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S13">
+		<detEntry friendlyPos="true" lane="120254976#5_0" pos="33.755" />
+		<detExit friendlyPos="true" lane="120254976#5_0" pos="113.755" />
+		<detEntry friendlyPos="true" lane="120254976#5_1" pos="33.755" />
+		<detExit friendlyPos="true" lane="120254976#5_1" pos="113.755" />
+		<detEntry friendlyPos="true" lane="120254976#5_2" pos="33.755" />
+		<detExit friendlyPos="true" lane="120254976#5_2" pos="113.755" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S14">
+		<detEntry friendlyPos="true" lane="-19485812#0_0" pos="110.43" />
+		<detExit friendlyPos="true" lane="-19485812#0_0" pos="190.43" />
+		<detEntry friendlyPos="true" lane="-19485812#0_1" pos="110.43" />
+		<detExit friendlyPos="true" lane="-19485812#0_1" pos="190.43" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S15">
+		<detEntry friendlyPos="true" lane="-19485718_0" pos="48.56" />
+		<detExit friendlyPos="true" lane="-19485718_0" pos="128.56" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S16">
+		<detEntry friendlyPos="true" lane="19484309#1_0" pos="7.395" />
+		<detExit friendlyPos="true" lane="19484309#1_0" pos="87.395" />
+		<detEntry friendlyPos="true" lane="19484309#1_1" pos="7.395" />
+		<detExit friendlyPos="true" lane="19484309#1_1" pos="87.395" />
+		<detEntry friendlyPos="true" lane="19484309#1_2" pos="7.395" />
+		<detExit friendlyPos="true" lane="19484309#1_2" pos="87.395" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S17">
+		<detEntry friendlyPos="true" lane="19463179_0" pos="38.82" />
+		<detExit friendlyPos="true" lane="19463179_0" pos="118.82" />
+		<detEntry friendlyPos="true" lane="19463179_1" pos="38.82" />
+		<detExit friendlyPos="true" lane="19463179_1" pos="118.82" />
+		<detEntry friendlyPos="true" lane="19463179_2" pos="38.82" />
+		<detExit friendlyPos="true" lane="19463179_2" pos="118.82" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S18">
+		<detEntry friendlyPos="true" lane="301635407#2_0" pos="14.52" />
+		<detExit friendlyPos="true" lane="301635407#2_0" pos="94.52" />
+		<detEntry friendlyPos="true" lane="301635407#2_1" pos="14.52" />
+		<detExit friendlyPos="true" lane="301635407#2_1" pos="94.52" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S19">
+		<detEntry friendlyPos="true" lane="-19451647#0_0" pos="25.345" />
+		<detExit friendlyPos="true" lane="-19451647#0_0" pos="105.345" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S20">
+		<detEntry friendlyPos="true" lane="-337393244#9_0" pos="101.37" />
+		<detExit friendlyPos="true" lane="-337393244#9_0" pos="181.37" />
+		<detEntry friendlyPos="true" lane="-337393244#9_1" pos="101.37" />
+		<detExit friendlyPos="true" lane="-337393244#9_1" pos="181.37" />
+		<detEntry friendlyPos="true" lane="-337393244#9_2" pos="101.37" />
+		<detExit friendlyPos="true" lane="-337393244#9_2" pos="181.37" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S21">
+		<detEntry friendlyPos="true" lane="337393244#8_0" pos="90.7" />
+		<detExit friendlyPos="true" lane="337393244#8_0" pos="170.7" />
+		<detEntry friendlyPos="true" lane="337393244#8_1" pos="90.7" />
+		<detExit friendlyPos="true" lane="337393244#8_1" pos="170.7" />
+		<detEntry friendlyPos="true" lane="337393244#8_2" pos="90.7" />
+		<detExit friendlyPos="true" lane="337393244#8_2" pos="170.7" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S22">
+		<detEntry friendlyPos="true" lane="-19484165_0" pos="46.06" />
+		<detExit friendlyPos="true" lane="-19484165_0" pos="126.06" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S23">
+		<detEntry friendlyPos="true" lane="-19484078#0_0" pos="63.05" />
+		<detExit friendlyPos="true" lane="-19484078#0_0" pos="143.05" />
+		<detEntry friendlyPos="true" lane="-19484078#0_1" pos="63.05" />
+		<detExit friendlyPos="true" lane="-19484078#0_1" pos="143.05" />
+	</entryExitDetector>
+
+
+	<!--<e2Detector id="S24#0" lane="19457616#4_0" length="80" pos="40.38"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S24#1" lane="19457616#4_1" length="80" pos="40.38"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S25#0" lane="-19457616#5_0" length="80" pos="23.025"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S25#1" lane="-19457616#5_1" length="80" pos="23.025"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S26#0" lane="19456179#4_0" length="80" pos="201.95"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S26#1" lane="19456179#4_1" length="80" pos="201.95"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S27#0" lane="19485812#5_0" length="80" pos="142.63"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S27#1" lane="19485812#5_1" length="80" pos="142.63"  freq="1" file="NUL" friendlyPos="true"/>
+	-->
+
+	<entryExitDetector file="NUL" freq="1" id="S24">
+		<detEntry friendlyPos="true" lane="19457616#4_0" pos="40.38" />
+		<detExit friendlyPos="true" lane="19457616#4_0" pos="120.38" />
+		<detEntry friendlyPos="true" lane="19457616#4_1" pos="40.38" />
+		<detExit friendlyPos="true" lane="19457616#4_1" pos="120.38" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S25">
+		<detEntry friendlyPos="true" lane="-19457616#5_0" pos="23.025" />
+		<detExit friendlyPos="true" lane="-19457616#5_0" pos="103.025" />
+		<detEntry friendlyPos="true" lane="-19457616#5_1" pos="23.025" />
+		<detExit friendlyPos="true" lane="-19457616#5_1" pos="103.025" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S26">
+		<detEntry friendlyPos="true" lane="19456179#4_0" pos="201.95" />
+		<detExit friendlyPos="true" lane="19456179#4_0" pos="281.95" />
+		<detEntry friendlyPos="true" lane="19456179#4_1" pos="201.95" />
+		<detExit friendlyPos="true" lane="19456179#4_1" pos="281.95" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S27">
+		<detEntry friendlyPos="true" lane="19485812#5_0" pos="142.63" />
+		<detExit friendlyPos="true" lane="19485812#5_0" pos="222.63" />
+		<detEntry friendlyPos="true" lane="19485812#5_1" pos="142.63" />
+		<detExit friendlyPos="true" lane="19485812#5_1" pos="222.63" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S28">
+		<detEntry friendlyPos="true" lane="-337393244#8_0" pos="90.7" />
+		<detExit friendlyPos="true" lane="-337393244#8_0" pos="170.7" />
+		<detEntry friendlyPos="true" lane="-337393244#8_1" pos="90.7" />
+		<detExit friendlyPos="true" lane="-337393244#8_1" pos="170.7" />
+		<detEntry friendlyPos="true" lane="-337393244#8_2" pos="90.7" />
+		<detExit friendlyPos="true" lane="-337393244#8_2" pos="170.7" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S29">
+		<detEntry friendlyPos="true" lane="337393244#7_0" pos="39.56" />
+		<detExit friendlyPos="true" lane="337393244#7_0" pos="119.56" />
+		<detEntry friendlyPos="true" lane="337393244#7_1" pos="39.56" />
+		<detExit friendlyPos="true" lane="337393244#7_1" pos="119.56" />
+		<detEntry friendlyPos="true" lane="337393244#7_2" pos="39.56" />
+		<detExit friendlyPos="true" lane="337393244#7_2" pos="119.56" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S30">
+		<detEntry friendlyPos="true" lane="-19456332#0_0" pos="98.7" />
+		<detExit friendlyPos="true" lane="-19456332#0_0" pos="178.7" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S31">
+		<detEntry friendlyPos="true" lane="-19456231#0_0" pos="62.86" />
+		<detExit friendlyPos="true" lane="-19456231#0_0" pos="142.86" />
+	</entryExitDetector>
+<!--
+	<e2Detector id="S32#0" lane="-337402032_0" length="80" pos="77.31"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S32#1" lane="-337402032_1" length="80" pos="77.31"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S32#2" lane="-337402032_2" length="80" pos="77.31"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S33#0" lane="120254976#13_0" length="80" pos="101.0"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S33#1" lane="120254976#13_1" length="80" pos="101.0"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S33#2" lane="120254976#13_2" length="80" pos="101.0"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S34#0" lane="-19457616#0_0" length="80" pos="76.25"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S34#1" lane="-19457616#0_1" length="80" pos="76.25"  freq="1" file="NUL" friendlyPos="true"/>
+	<e2Detector id="S35#0" lane="-255426437#0_0" length="80" pos="114.65"  freq="1" file="NUL" friendlyPos="true"/>-->
+	<entryExitDetector file="NUL" freq="1" id="S32">
+		<detEntry friendlyPos="true" lane="-337402032_0" pos="77.31" />
+		<detExit friendlyPos="true" lane="-337402032_0" pos="157.31" />
+		<detEntry friendlyPos="true" lane="-337402032_1" pos="77.31" />
+		<detExit friendlyPos="true" lane="-337402032_1" pos="157.31" />
+		<detEntry friendlyPos="true" lane="-337402032_2" pos="77.31" />
+		<detExit friendlyPos="true" lane="-337402032_2" pos="157.31" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S33">
+		<detEntry friendlyPos="true" lane="120254976#13_0" pos="101.0" />
+		<detExit friendlyPos="true" lane="120254976#13_0" pos="181.0" />
+		<detEntry friendlyPos="true" lane="120254976#13_1" pos="101.0" />
+		<detExit friendlyPos="true" lane="120254976#13_1" pos="181.0" />
+		<detEntry friendlyPos="true" lane="120254976#13_2" pos="101.0" />
+		<detExit friendlyPos="true" lane="120254976#13_2" pos="181.0" />
+	</entryExitDetector>
+	<entryExitDetector file="NUL" freq="1" id="S34">
+		<detEntry friendlyPos="true" lane="-19457616#0_0" pos="76.25" />
+		<detExit friendlyPos="true" lane="-19457616#0_0" pos="156.25" />
+		<detEntry friendlyPos="true" lane="-19457616#0_1" pos="76.25" />
+		<detExit friendlyPos="true" lane="-19457616#0_1" pos="156.25" />
+	</entryExitDetector>-->
+	<entryExitDetector file="NUL" freq="1" id="S35">
+		<detEntry friendlyPos="true" lane="-255426437#0_0" pos="114.65" />
+		<detExit friendlyPos="true" lane="-255426437#0_0" pos="194.65" />
+	</entryExitDetector>
+</additional>

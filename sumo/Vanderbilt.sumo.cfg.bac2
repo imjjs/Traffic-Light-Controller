@@ -1,0 +1,13 @@
+<configuration>
+  <input>
+      <net-file value="Vanderbilt.net.xml"/>
+      <route-files value="morning10/morning1.xml"/>
+      <additional-files value="detectors.xml"/>
+  </input>
+  <time-to-teleport>7200</time-to-teleport>
+  <time>
+    <begin value="0"/>
+    <end value="7200"/>
+    <step-length value="0.1"/>
+  </time>
+</configuration>

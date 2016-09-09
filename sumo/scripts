@@ -1,0 +1,2 @@
+python randomTrips.py > trips.xml;
+$SUMO_HOME/bin/duarouter --trip-files trips.xml --net-file Vanderbilt.net.xml  --output-file morning.traffic.xml --ignore-errors true

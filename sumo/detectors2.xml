@@ -1,0 +1,143 @@
+<additional>
+  <inductionLoop id="loop1a" lane="19479801#0_0" pos="16.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop1b" lane="19479801#0_1" pos="16.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop1c" lane="-19479801#0_1" pos="2938.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop1d" lane="-19479801#0_0" pos="2938.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop2a" lane="19470377#0_0" pos="16.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop2b" lane="19470377#0_1" pos="16.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop2c" lane="19470377#0_2" pos="16.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop2d" lane="-19470377#0_2" pos="28.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop2e" lane="-19470377#0_1" pos="28.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop2f" lane="-19470377#0_0" pos="28.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop3a" lane="-245915229#14_1" pos="16.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop3b" lane="-245915229#14_0" pos="16.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop3c" lane="245915229#14_0" pos="585.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop3d" lane="245915229#14_1" pos="585.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop4a" lane="120254976#0_2" pos="16.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop4b" lane="120254976#0_1" pos="16.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop4c" lane="120254976#0_0" pos="16.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop4d" lane="-120254976#0_0" pos="190.0" freq="120" file="NUL"/>
+  <inductionLoop id="loop4e" lane="-120254976#0_1" pos="190.0" freq="120" file="NUL"/>
+  <inductionLoop id="loop4f" lane="-120254976#0_2" pos="190.0" freq="120" file="NUL"/>
+  <inductionLoop id="loop5a" lane="-19468772_0" pos="16.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop5b" lane="-19468772_1" pos="16.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop5c" lane="19468772_0" pos="196.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop5d" lane="19468772_1" pos="196.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop6a" lane="-41139605#0_1" pos="224.0" freq="120" file="NUL"/>
+  <inductionLoop id="loop6b" lane="-41139605#0_0" pos="224.0" freq="120" file="NUL"/>
+  <inductionLoop id="loop6c" lane="41139605#0_1" pos="16.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop6d" lane="41139605#0_0" pos="16.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop7a" lane="19456179#2_1" pos="88.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop7b" lane="19456179#2_0" pos="88.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop7c" lane="-19456179#2_2" pos="88.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop7d" lane="-19456179#2_1" pos="88.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop7e" lane="-19456179#2_0" pos="88.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop8a" lane="-19463160#3_0" pos="70.0" freq="120" file="NUL"/>
+  <inductionLoop id="loop8b" lane="-19463160#3_1" pos="70.0" freq="120" file="NUL"/>
+  <inductionLoop id="loop8c" lane="19463160#3_0" pos="64.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop8d" lane="19463160#3_1" pos="64.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop9a" lane="-337393244#1_0" pos="100.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop9b" lane="-337393244#1_1" pos="100.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop9c" lane="-337393244#1_2" pos="100.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop9d" lane="337393244#1_2" pos="88.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop9e" lane="337393244#1_1" pos="88.5" freq="120" file="NUL"/>
+  <inductionLoop id="loop9f" lane="337393244#1_0" pos="88.5" freq="120" file="NUL"/>
+<!--   we:red, ns:green -->
+<!--   w = 1,  e = 2, n = 3, s = 3 -->
+<e2Detector id="1443088096SS0" lane="120254976#13_0" length="80" pos="101.0" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="1443088096SS1" lane="120254976#13_1" length="80" pos="101.0" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="1443088096SS2" lane="120254976#13_2" length="80" pos="101.0" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="1443088096SE0" lane="-19457616#0_0" length="80" pos="76.25" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="1443088096SE1" lane="-19457616#0_1" length="80" pos="76.25" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="1443088096SW0" lane="-255426437#0_0" length="80" pos="114.65" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="1443088096SN0" lane="-337402032_0" length="80" pos="77.31" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="1443088096SN1" lane="-337402032_1" length="80" pos="77.31" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="1443088096SN2" lane="-337402032_2" length="80" pos="77.31" freq="1" file="NUL" friendlyPos="true"/>
+
+<!--   w = 3,  e = 2, n = 2, s = 2 -->
+<e2Detector id="1443088101SS0" lane="-19463160#12_0" length="80" pos="29.915" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="1443088101SS1" lane="-19463160#12_1" length="80" pos="29.915" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="1443088101SE0" lane="19479801#10_0" length="80" pos="173.96" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="1443088101SE1" lane="19479801#10_1" length="80" pos="173.96" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="1443088101SW0" lane="-19456179#0_0" length="80" pos="153.4" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="1443088101SW1" lane="-19456179#0_1" length="80" pos="153.4" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="1443088101SW2" lane="-19456179#0_2" length="80" pos="153.4" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="1443088101SN0" lane="19463160#11_0" length="80" pos="55.39" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="1443088101SN1" lane="19463160#11_1" length="80" pos="55.39" freq="1" file="NUL" friendlyPos="true"/>
+
+<!--   w = 0,  e = 2, n = 3, s = 3 -->
+<e2Detector id="202407913SE0" lane="19482278#5_0" length="80" pos="62.93" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202407913SE1" lane="19482278#5_1" length="80" pos="62.93" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202407913SS0" lane="337393244#4_0" length="80" pos="146.56" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202407913SS1" lane="337393244#4_1" length="80" pos="146.56" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202407913SS2" lane="337393244#4_2" length="80" pos="146.56" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202407913SN0" lane="-337393244#5_0" length="80" pos="135.67" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202407913SN1" lane="-337393244#5_1" length="80" pos="135.67" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202407913SN2" lane="-337393244#5_2" length="80" pos="135.67" freq="1" file="NUL" friendlyPos="true"/>
+
+<!--   w = 1,  e = 2, n = 3, s = 3 -->
+<e2Detector id="202514078SS0" lane="120254976#5_0" length="80" pos="33.755" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514078SS1" lane="120254976#5_1" length="80" pos="33.755" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514078SS2" lane="120254976#5_2" length="80" pos="33.755" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514078SE0" lane="-19485812#0_0" length="80" pos="110.43" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514078SE1" lane="-19485812#0_1" length="80" pos="110.43" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514078SW0" lane="-19485718_0" length="80" pos="48.56" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514078SN0" lane="-120254976#6_0" length="80" pos="72.26" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514078SN1" lane="-120254976#6_1" length="80" pos="72.26" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514078SN2" lane="-120254976#6_2" length="80" pos="72.26" freq="1" file="NUL" friendlyPos="true"/>
+
+<!--   w = 2,  e = 2, n = 2, s = 2 -->
+<e2Detector id="3010263944SS0" lane="-19457616#5_0" length="80" pos="23.025" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="3010263944SS1" lane="-19457616#5_1" length="80" pos="23.025" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="3010263944SE0" lane="19456179#4_0" length="80" pos="201.95" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="3010263944SE1" lane="19456179#4_1" length="80" pos="201.95" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="3010263944SW0" lane="19485812#5_0" length="80" pos="142.63" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="3010263944SW1" lane="19485812#5_1" length="80" pos="142.63" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="3010263944SN0" lane="19457616#4_0" length="80" pos="40.38" freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="3010263944SN1" lane="19457616#4_1" length="80" pos="40.38" freq="1" file="NUL" friendlyPos="true"/>
+
+  <!--   w = 3,  e = 3, n = 2, s = 2 -->
+<e2Detector id="202514074SS0" lane="-19469820#0_0" length="80" pos="28.72"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514074SS1" lane="-19469820#0_1" length="80" pos="28.72"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514074SE0" lane="-337393244#0_0" length="80" pos="143.13"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514074SE1" lane="-337393244#0_1" length="80" pos="143.13"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514074SE2" lane="-337393244#0_2" length="80" pos="143.13"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514074SW0" lane="337402032_0" length="80" pos="77.31"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514074SW1" lane="337402032_1" length="80" pos="77.31"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514074SW2" lane="337402032_2" length="80" pos="77.31"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514074SN0" lane="19469758#3_0" length="80" pos="52.05"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514074SN1" lane="19469758#3_1" length="80" pos="52.05"  freq="1" file="NUL" friendlyPos="true"/>
+
+  <!--   w = 1,  e = 1, n = 3, s = 3 -->
+<e2Detector id="202305800SS0" lane="337393244#7_0" length="80" pos="39.56"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202305800SS1" lane="337393244#7_1" length="80" pos="39.56"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202305800SS2" lane="337393244#7_2" length="80" pos="39.56"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202305800SE0" lane="-19456332#0_0" length="80" pos="98.7"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202305800SW0" lane="-19456231#0_0" length="80" pos="62.86"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202305800SN0" lane="-337393244#8_0" length="80" pos="90.7"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202305800SN1" lane="-337393244#8_1" length="80" pos="90.7"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202305800SN2" lane="-337393244#8_2" length="80" pos="90.7"  freq="1" file="NUL" friendlyPos="true"/>
+
+  <!--   w = 2,  e = 1, n = 3, s = 3 -->
+<e2Detector id="202514063SS0" lane="337393244#8_0" length="80" pos="90.7"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514063SS1" lane="337393244#8_1" length="80" pos="90.7"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514063SS2" lane="337393244#8_2" length="80" pos="90.7"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514063SE0" lane="-19484165_0" length="80" pos="46.06"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514063SW0" lane="-19484078#0_0" length="80" pos="63.05"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514063SW1" lane="-19484078#0_1" length="80" pos="63.05"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514063SN0" lane="-337393244#9_0" length="80" pos="101.37"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514063SN1" lane="-337393244#9_1" length="80" pos="101.37"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202514063SN2" lane="-337393244#9_2" length="80" pos="101.37"  freq="1" file="NUL" friendlyPos="true"/>
+
+  <!--   w = 1,  e = 2, n = 3, s = 3 -->
+<e2Detector id="202270699SS0" lane="19463179_0" length="80" pos="38.82"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202270699SS1" lane="19463179_1" length="80" pos="38.82"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202270699SS2" lane="19463179_2" length="80" pos="38.82"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202270699SE0" lane="301635407#2_0" length="80" pos="14.52"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202270699SE1" lane="301635407#2_1" length="80" pos="14.52"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202270699SW0" lane="-19451647#0_0" length="80" pos="25.345"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202270699SN0" lane="19484309#1_0" length="80" pos="7.395"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202270699SN1" lane="19484309#1_1" length="80" pos="7.395"  freq="1" file="NUL" friendlyPos="true"/>
+<e2Detector id="202270699SN2" lane="19484309#1_2" length="80" pos="7.395"  freq="1" file="NUL" friendlyPos="true"/>
+</additional>  
+
