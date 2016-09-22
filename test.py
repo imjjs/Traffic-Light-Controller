@@ -1,6 +1,6 @@
 import ctypes
 import sys
-sys.path.append("/home/local/VANDERBILT/liy29/sumo-0.26.0/tools/")
+sys.path.append("/home/liy29/sumo-0.26.0/tools/")
 
 import traci
 from threading import Lock
