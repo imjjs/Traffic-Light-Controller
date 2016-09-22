@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <cstdlib>
 #include <iostream>
-#include <fstream> 
+#include <fstream>
 #include <string>
 #include <cassert>
 
@@ -26,7 +26,7 @@ bool isYellowPhase(std::string controller, int idx)
 void Intersection::debug(int a, int b)
 {
 
-	std::cout<<"current threshold:"<<states[0].threshold1<<','<<states[0].threshold2<<std::endl;
+	std::cout<<"current threshold:"<<states[0].threshold<<std::endl;
 	std::cout<<"q1, q2:"<<a<<','<<b<<std::endl;
 }
 
@@ -61,8 +61,7 @@ void Intersection::loadFromJson(std::string& filename) {
 	int _minInterval, _maxInterval;
 	int __minInterval = controllor["minInterval"].asInt();
 	int __maxInterval = controllor["maxInterval"].asInt();
-	int _threshold1 = controllor["threshold1"].asInt();
-	int _threshold2 = controllor["threshold2"].asInt();
+	int _threshold = controllor["threshold1"].asInt();
 
 	for (int i = 0; i < phaseList.size(); ++i) {
 		std::string _phase = phaseList[i];
@@ -71,8 +70,8 @@ void Intersection::loadFromJson(std::string& filename) {
 
 		 if(true == isYellowPhase(name, i))
 		{
-		 	_minInterval = 20;
-			_maxInterval = 20;
+		 	_minInterval = 50;
+			_maxInterval = 50;
 		}
 		else
 		{
@@ -84,7 +83,7 @@ void Intersection::loadFromJson(std::string& filename) {
 		// int _threshold1 = controllor["threshold1"][i].asInt();
 		// int _threshold2 = controllor["threshold2"][i].asInt();
 	//	std::cout << "Before adding state, no. of states: " << states.size() << std::endl << std::flush;
-		State _s = { _state, _phase, _minInterval, _maxInterval, _threshold1, _threshold2 };
+		State _s = { _state, _phase, _minInterval, _maxInterval, _threshold};
 		states.push_back(_s);
       //  std::cout << "After adding state " << _state << ", no. of states: " << states.size() << std::endl << std::flush;
 	}
@@ -96,13 +95,10 @@ void Intersection::loadFromJson(std::string& filename) {
 }
 
 
-void Intersection::setThreshold(int t1, int t2)
+void Intersection::setThreshold(int threshold, int phaseIdx)
 {
-	for(auto& s : states)
-	{
-		s.threshold1 = t1;
-		s.threshold2 = t2;
-	}
+	auto& s = states[phaseIdx];
+	s.threshold = threshold;
 }
 
 
@@ -163,23 +159,17 @@ bool Intersection::control() {
 	//std::cout << "C3" << std::flush << std::endl;
 	calculateQLength(&q1, &q2);
 	//debug(q1,q2);
-	//std::cout << "q1,q2: " << q1<<','<<q2<< std::endl;
-	
-	if (q1 <= currentState.threshold1)
-	{	
-		//std::cout<<"q1 less eq than t1, keep state"<<std::endl;
-		return false;
-	}
-	if (q2 > currentState.threshold2)
-	{
-		//std::cout<<"q2 greater than t2, keep state"<<std::endl;
-		return false;
-	}
+	//std::cout << "q1-q2: " <<q1<<','<<q2<<",threshold:"<<currentState.threshold<< std::endl;
 
-	else
-	{	
-		//std::cout<<"switch state"<<std::endl;
+	if (q1  - q2 > currentState.threshold)
+	{
+		//std::cout<<"q1 less eq than t1, keep state"<<std::endl;
 		return true;
+	}
+	else
+	{
+		//std::cout<<"switch state"<<std::endl;
+		return false;
 	}
 }
 

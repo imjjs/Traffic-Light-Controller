@@ -7,6 +7,7 @@ import os
 import time
 import sys
 import ast
+import config
 
 try:
     import xml.etree.cElementTree as ET
@@ -314,6 +315,19 @@ intersection_info = {
 sensor_num = {'S1':2, 'S2':2, 'S3':2, 'S4':3, 'S9':3, 'S10':3, 'S11':2, 'S12':3, 'S13':3, 'S14':2, 'S15':1, 'S24':2, 'S25':2, 'S26':2, 'S27':2, 'S32':3, 'S33':3, 'S34':2, 'S35':1}
 test = ctypes.cdll.LoadLibrary('build/libtest.so')
 
+def findPhase():
+    ret = []
+    for i in selected_intersections:
+        phases = phaseCodes[i]
+        for idx in range(len(phases)):
+            phase = phases[idx]
+            if 'y' in phase:
+                continue
+            obj = config.Param(i, idx)
+            ret.append(obj)
+    return ret
+
+
 def get_open_port(howMany=1):
     """Return a list of n free port numbers on localhost"""
     results = []
@@ -353,7 +367,7 @@ def durationAndDistance(port):
         totalDuration += float(child.attrib['duration'])
         totalDistance += float(child.attrib['routeLength'])
     xmlfile.close()
-    #os.remove("tripinfo" + str(port) + ".xml")
+    os.remove("tripinfo" + str(port) + ".xml")
     return totalDistance/ totalDuration
 
 
@@ -379,10 +393,17 @@ def simulationProcess(paraList, sumoMap):
     time.sleep(10)
 
     traci.init(port)
-    int_array = (ctypes.c_int * len(paraList))(*paraList)
-    test.test_init(len(paraList), int_array)
+    meta_param = findPhase()
+    assert(len(meta_param) == len(paraList))
+    test.test_init()
+    for idx in range(len(meta_param)):
+        obj = meta_param[idx]
+        ins_name = obj.controller
+        ins_phase = obj.phase
+        ins_threshold = paraList[idx]
+        test.setThreshold(ins_name, ins_threshold, ins_phase)
 
-    for s in range(72000):
+    for s in range(22000):
         traci.simulationStep()
         for i in selected_intersections:
             sensors = intersection_info[i]['sensors']
@@ -407,6 +428,7 @@ def simulationProcess(paraList, sumoMap):
 
 if __name__ == '__main__':
     #simulationProcess([0,5], '../sumo/Vanderbilt.sumo.cfg')
+
     raw_para = sys.argv[1]
     para = ast.literal_eval(raw_para)
     print  simulationProcess(para, './sumo/Vanderbilt.sumo.cfg')

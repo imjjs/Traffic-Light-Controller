@@ -112,7 +112,7 @@
 		<detEntry friendlyPos="true" lane="337402032_2" pos="77.31" />
 		<detExit friendlyPos="true" lane="337402032_2" pos="157.31" />
 	</entryExitDetector>
-	
+
 	<!--<e2Detector id="S9#0" lane="-337393244#5_0" length="80" pos="135.67"  freq="1" file="NUL" friendlyPos="true"/>
 	<e2Detector id="S9#1" lane="-337393244#5_1" length="80" pos="135.67"  freq="1" file="NUL" friendlyPos="true"/>
 	<e2Detector id="S9#2" lane="-337393244#5_2" length="80" pos="135.67"  freq="1" file="NUL" friendlyPos="true"/>
@@ -144,7 +144,7 @@
 		<detEntry friendlyPos="true" lane="19482278#5_1" pos="62.93" />
 		<detExit friendlyPos="true" lane="19482278#5_1" pos="146.93" />
 	</entryExitDetector>
-	
+
 	<!--<e2Detector id="S12#0" lane="-120254976#6_0" length="80" pos="72.26"  freq="1" file="NUL" friendlyPos="true"/>
 	<e2Detector id="S12#1" lane="-120254976#6_1" length="80" pos="72.26"  freq="1" file="NUL" friendlyPos="true"/>
 	<e2Detector id="S12#2" lane="-120254976#6_2" length="80" pos="72.26"  freq="1" file="NUL" friendlyPos="true"/>
@@ -154,8 +154,8 @@
 	<e2Detector id="S14#0" lane="-19485812#0_0" length="80" pos="110.43"  freq="1" file="NUL" friendlyPos="true"/>
 	<e2Detector id="S14#1" lane="-19485812#0_1" length="80" pos="110.43"  freq="1" file="NUL" friendlyPos="true"/>
 	<e2Detector id="S15#0" lane="-19485718_0" length="80" pos="48.56"  freq="1" file="NUL" friendlyPos="true"/>-->
-	
-	
+
+
 	<entryExitDetector file="NUL" freq="1" id="S12">
 		<detEntry friendlyPos="true" lane="-120254976#6_0" pos="72.26" />
 		<detExit friendlyPos="true" lane="-120254976#6_0" pos="152.26" />

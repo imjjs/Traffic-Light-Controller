@@ -16,8 +16,7 @@ struct State {
 	std::string phase;
 	int minInterval;
 	int maxInterval;
-	int threshold1;
-	int threshold2;
+	int threshold;
 };
 
 

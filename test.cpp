@@ -23,7 +23,7 @@ map<string, vector<string>> phaseCodes {
 {"Controller1443088101",{"GGGggrrrrGGGggrrrr", "yyyggrrrryyyggrrrr", "rrrGGrrrrrrrGGrrrr", "rrryyrrrrrrryyrrrr", "rrrrrGGggrrrrrGGgg", "rrrrryyggrrrrryygg", "rrrrrrrGGrrrrrrrGG", "rrrrrrryyrrrrrrryy"}}
 };
 extern "C" {
-void test_init(int dim, int args[])
+void test_init()
 {
 	for(string name : selected_intersections){
 		Intersection* ins = new Intersection(name);
@@ -32,22 +32,12 @@ void test_init(int dim, int args[])
 		intersections.push_back(ins);
 		ins_dict[name] = ins;
 	}
+}
 
-	vector<vector<int>> paraList;
-	for(int i = 0; i < dim; ++i)
-	{
-		vector<int> tmp;
-		tmp.push_back(args[i]);
-		i++;
-		assert(i < dim);
-		tmp.push_back(args[i]);
-		paraList.push_back(tmp);
-	}
-	assert (paraList.size() == intersections.size());
-
-	for(int i = 0; i < intersections.size(); ++i){
-		intersections[i]->setThreshold(paraList[i][0], paraList[i][1]);
-	}
+void setThreshold(char* name, int threshold, int phaseIdx)
+{
+		Intersection* ins = ins_dict.at(string(name));
+		ins->setThreshold(threshold, phaseIdx);
 }
 
 
@@ -104,18 +94,18 @@ void debug(){
 // 	for(int i = 0; i < intersections.size(); ++i){
 // 		intersections[i]->setThreshold(paraList[i][0], paraList[i][1]);
 // 	}
- 	
-// 	for(int t = singleton.simulation.getMinExpectedNumber(); 
-// 		t > 0; 
+
+// 	for(int t = singleton.simulation.getMinExpectedNumber();
+// 		t > 0;
 // 		t = singleton.simulation.getMinExpectedNumber()){
 // 		singleton.commandSimulationStep(0);
 // 		for(Intersection* ins: intersections)
 // 			ins->run();
 // 		//::std::this_thread::sleep_for(chrono::milliseconds(2));
 // 	}
-	
+
 // 	singleton.close_connection();
- 
+
 // 	//TODO:: analysis the output xmlfile
 // 	::std::this_thread::sleep_for(chrono::seconds(10));
 // 	system("python parse_output.py tripinfo.xml");
@@ -131,7 +121,7 @@ void debug(){
 // 	assert (pModule != NULL);
 // 	pAreal = PyObject_GetAttrString(pModule, "areal");
 // 	int a[] = {0,5 };//,4,2,3,4,3,3,3,3};
-// 	myexec(a, 2); 
+// 	myexec(a, 2);
 // 	Py_Finalize();
 // 	return 0;
 // }
