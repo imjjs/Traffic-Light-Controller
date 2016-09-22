@@ -13,7 +13,7 @@ try:
     import xml.etree.cElementTree as ET
 except ImportError:
     import xml.etree.ElementTree as ET
-
+sys.path.append("/home/local/VANDERBILT/liy29/sumo-0.26.0/tools/")
 
 PORT_LOCK = Lock()
 DEVNULL = open(os.devnull, "w")
@@ -388,7 +388,7 @@ def avgSpeed(filename):
 def simulationProcess(paraList, sumoMap):
     port = generator_ports()
     sumoProcess = subprocess.Popen(
-        ["sumo", "-c", sumoMap, "--tripinfo-output", "tripinfo" + str(port) + ".xml",
+        ["/opt/sumo/bin/sumo", "-c", sumoMap, "--tripinfo-output", "tripinfo" + str(port) + ".xml",
          "--remote-port", str(port)], stdout= DEVNULL, stderr = DEVNULL)
     time.sleep(10)
 
@@ -403,8 +403,10 @@ def simulationProcess(paraList, sumoMap):
         ins_threshold = paraList[idx]
         test.setThreshold(ins_name, ins_threshold, ins_phase)
 
-    for s in range(22000):
+    for s in range(50000):
         traci.simulationStep()
+        if not s % 10 == 0:
+            continue
         for i in selected_intersections:
             sensors = intersection_info[i]['sensors']
             for s in sensors:
