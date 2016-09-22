@@ -408,7 +408,8 @@ def simulationProcess(paraList, sumoMap):
 
     for s in range(50000):
         traci.simulationStep()
-        if not s % 10 == 0
+        if not s % 10 == 0:
+            continue
         for i in selected_intersections:
             sensors = intersection_info[i]['sensors']
             for s in sensors:
