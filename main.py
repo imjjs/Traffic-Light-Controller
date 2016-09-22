@@ -11,7 +11,7 @@ import random
 CoreNumber = multiprocessing.cpu_count()
 
 TestPeriod = 36000
-testRange = (1, 32)
+testRange = (0, CoreNumber-1)
 stepLength = 1
 
 def mytestWarp(tup):
