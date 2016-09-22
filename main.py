@@ -18,8 +18,14 @@ def mytestWarp(tup):
     para = tup[1]
     idx = tup[2]
     para[idx] = tup[0]
-    speed = subprocess.check_output(
-        ["python", "test.py", str(para).replace(' ','')] )#, stdout= DEVNULL, stderr = DEVNULL)
+    speed = 0.0
+    while True:
+        try:
+            speed = subprocess.check_output(["python", "test.py", str(para).replace(' ','')] )#, stdout= DEVNULL, stderr = DEVNULL)
+        except subprocess.CalledProcessError as grepexc:
+            print "error code", grepexc.returncode, grepexc.output
+            continue
+        break
     return (speed, tup[0])
 
 
@@ -53,7 +59,7 @@ if __name__ == '__main__':
 
         f = open("intersection" + str(idx) + ".txt", "a")
         for i in result:
-            #print i[0], i[1], i[2]
+            print i[0], i[1]
             f.write(str(i[0]) +str(i[1])  + '\n')
 
 
