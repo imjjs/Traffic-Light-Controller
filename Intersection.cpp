@@ -189,7 +189,7 @@ std::string Intersection::run() {
 	}
 	else {
 		keepState();
-		clock++;
+		clock += 10;
 		return "";
 	}
 	return states[currentStateIdx].phase;
