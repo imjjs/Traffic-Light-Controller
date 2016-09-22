@@ -1,11 +1,14 @@
 import ctypes
+import sys
+sys.path.append("/home/local/VANDERBILT/liy29/sumo-0.26.0/tools/")
+
 import traci
 from threading import Lock
 import socket
 import subprocess
 import os
 import time
-import sys
+
 import ast
 import config
 
@@ -13,7 +16,7 @@ try:
     import xml.etree.cElementTree as ET
 except ImportError:
     import xml.etree.ElementTree as ET
-sys.path.append("/home/local/VANDERBILT/liy29/sumo-0.26.0/tools/")
+
 
 PORT_LOCK = Lock()
 DEVNULL = open(os.devnull, "w")
@@ -405,8 +408,7 @@ def simulationProcess(paraList, sumoMap):
 
     for s in range(50000):
         traci.simulationStep()
-        if not s % 10 == 0:
-            continue
+        if not s % 10 == 0
         for i in selected_intersections:
             sensors = intersection_info[i]['sensors']
             for s in sensors:
