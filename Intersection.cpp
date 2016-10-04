@@ -1,6 +1,6 @@
 #include "Intersection.hpp"
 #include "config.hpp"
-#include "json/json.h"
+#include "json.h"
 #include <cassert>
 #include <algorithm>
 #include <cstdlib>
@@ -10,7 +10,13 @@
 #include <cassert>
 
 std::map<std::string, std::string> Intersection::controllorIDTotrafficLightID;
-
+static std::map<std::string, std::vector<std::string> > phaseCodes {
+{"Controller202407913",{"GGGggGGGGgrrrr", "yyyggyyyygrrrr", "rrrGGrrrrGrrrr", "rrryyrrrryrrrr", "rrrrrrrrrrGGGG", "rrrrrrrrrryyyy"}},
+{"Controller1443088096",{"GGGGggrrGGGGggrrrr", "yyyyggrryyyyggrrrr", "rrrrGGrrrrrrGGrrrr", "rrrryyrrrrrryyrrrr", "GrrrrrGGrrrrrrGGgg", "yrrrrryyrrrrrryygg", "rrrrrrrrrrrrrrrrGG", "rrrrrrrrrrrrrrrryy"}},
+{"Controller202514078",{"GGGGggrrrrGGGGggrrrr", "yyyyggrrrryyyyggrrrr", "rrrrGGrrrrrrrrGGrrrr", "rrrryyrrrrrrrryyrrrr", "rrrrrrGGggrrrrrrGGgg", "rrrrrryyggrrrrrryygg", "rrrrrrrrGGrrrrrrrrGG", "rrrrrrrryyrrrrrrrryy"}},
+{"Controller3010263944",{"GGggrrrrrGGggrrrrr", "yyggrrrrryyggrrrrr", "rrGGrrrrrrrGGrrrrr", "rryyrrrrrrryyrrrrr", "rrrrGGGggrrrrGGGgg", "rrrryyyggrrrryyygg", "rrrrrrrGGrrrrrrrGG", "rrrrrrryyrrrrrrryy"}},
+{"Controller1443088101",{"GGGggrrrrGGGggrrrr", "yyyggrrrryyyggrrrr", "rrrGGrrrrrrrGGrrrr", "rrryyrrrrrrryyrrrr", "rrrrrGGggrrrrrGGgg", "rrrrryyggrrrrryygg", "rrrrrrrGGrrrrrrrGG", "rrrrrrryyrrrrrrryy"}}
+};
 class parseException {};
 
 bool isYellowPhase(std::string controller, int idx)
@@ -61,14 +67,19 @@ void Intersection::loadFromJson(std::string& filename) {
 	int _minInterval, _maxInterval;
 	int __minInterval = controllor["minInterval"].asInt();
 	int __maxInterval = controllor["maxInterval"].asInt();
-	int _threshold = controllor["threshold1"].asInt();
+	int _threshold = controllor["threshold"].asInt();
 
 	for (int i = 0; i < phaseList.size(); ++i) {
 		std::string _phase = phaseList[i];
 		//std::cout << "_phase = " << _phase << " and controller[PhaseToState][_phase] = " << controllor["PhaseToState"][_phase].asString() << std::endl << std::flush;
-		std::string _state = controllor["PhaseToState"][_phase].asString();
+        Json::Value phase_desc = controllor["PhaseDescriptor"][_phase];
+		std::string _state = phase_desc["flows"].asString();
 
-		 if(true == isYellowPhase(name, i))
+        int _minInterval = phase_desc["minInterval"].asInt();
+		int _maxInterval = phase_desc["maxInterval"].asInt();
+		int _threshold = phase_desc["threshold"].asInt();
+
+		if(true == isYellowPhase(name, i))
 		{
 		 	_minInterval = 50;
 			_maxInterval = 50;
@@ -78,12 +89,10 @@ void Intersection::loadFromJson(std::string& filename) {
 			_minInterval = __minInterval;
 			_maxInterval = __maxInterval;
 		}
-		// int _minInterval = controllor["minInterval"][i].asInt();
-		// int _maxInterval = controllor["minInterval"][i].asInt();
-		// int _threshold1 = controllor["threshold1"][i].asInt();
-		// int _threshold2 = controllor["threshold2"][i].asInt();
+
 	//	std::cout << "Before adding state, no. of states: " << states.size() << std::endl << std::flush;
 		State _s = { _state, _phase, _minInterval, _maxInterval, _threshold};
+        std::cout <<_s.stateRow<<','<<_s.phase<<','<<_s.minInterval<<','<<_s.maxInterval<<','<<_s.threshold<<std::endl<<std::flush;
 		states.push_back(_s);
       //  std::cout << "After adding state " << _state << ", no. of states: " << states.size() << std::endl << std::flush;
 	}
@@ -190,8 +199,22 @@ std::string Intersection::run() {
 	else {
 		keepState();
 		clock += 10;
-		return "";
 	}
+	return states[currentStateIdx].phase;
+}
+
+std::string Intersection::run(double _current_time) {
+	assert(_current_time - currentTime > 0);
+	updateQLengthList();
+	if (true == control()) {
+		switchState();
+		clock = 0;
+	}
+	else {
+		keepState();
+		clock += (_current_time - currentTime)*10;
+	}
+	currentTime = _current_time;
 	return states[currentStateIdx].phase;
 }
 

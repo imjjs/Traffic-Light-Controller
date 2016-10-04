@@ -18,7 +18,3 @@ using namespace std;
 // //		{"FH", {"Grr", "rGG", 2, 0, 1, 0}},
 // //		{"AC", {"GGrr", "rrGG", 2, 0, 2, 0}},
 // 	};
-
-
-
-

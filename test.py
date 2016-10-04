@@ -391,7 +391,7 @@ def avgSpeed(filename):
 def simulationProcess(paraList, sumoMap):
     port = generator_ports()
     sumoProcess = subprocess.Popen(
-        ["/opt/sumo/bin/sumo", "-c", sumoMap, "--tripinfo-output", "tripinfo" + str(port) + ".xml",
+        ["sumo", "-c", sumoMap, "--tripinfo-output", "tripinfo" + str(port) + ".xml",
          "--remote-port", str(port)], stdout= DEVNULL, stderr = DEVNULL)
     time.sleep(10)
 

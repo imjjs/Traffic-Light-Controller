@@ -22,6 +22,7 @@ struct State {
 
 class Intersection {
 protected:
+	double currentTime;
 	std::string name;
 	std::vector<State> states;
 	std::vector<std::string> sensors;
@@ -34,7 +35,7 @@ protected:
 	virtual void updateQLengthList(){ };
 public:
 	int currentStateIdx;
-	explicit Intersection() : name( "" ), clock( 0 ), currentStateIdx( 0 ) { };
+	explicit Intersection() : name( "" ), clock( 0 ), currentStateIdx( 0 ), currentTime(0.0)  { };
 	Intersection(const std::string& name);
 	Intersection(const Intersection&) = delete;
 	virtual ~Intersection() {};
@@ -44,6 +45,7 @@ public:
 	bool control();
 	static std::map<std::string, std::string> controllorIDTotrafficLightID;
 	std::string run();
+	std::string run(double);
 	virtual void debug(int, int);
 	void setThreshold(int, int);
 	void print();

@@ -4,7 +4,6 @@
 #include <map>
 
 // extern std::map<std::string, std::vector<std::string> > INP_DATA;
-extern std::map<std::string, std::vector<std::string> > phaseCodes;
-extern std::vector<std::string> selected_intersections;
+//extern std::map<std::string, std::vector<std::string> > phaseCodes;
 
 #endif

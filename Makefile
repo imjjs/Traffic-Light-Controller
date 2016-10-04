@@ -20,5 +20,5 @@ intersection.o: init Intersection.cpp Intersection.hpp config.hpp
 json.o: init json/jsoncpp.cpp
 	$(CC) -std=c++11 -c -I json/include -fPIC -o $(BUILD)/json.o json/jsoncpp.cpp
 
-libtest.so: test.o intersection.o json.o
-	$(CC) -shared -fPIC -o $(BUILD)/libtest.so $(BUILD)/test.o $(BUILD)/intersection.o $(BUILD)/json.o
+libtest.so: test.o intersection.o json.o config.cpp
+	$(CC) -shared -std=c++11 -fPIC -o $(BUILD)/libtest.so $(BUILD)/test.o config.cpp $(BUILD)/intersection.o $(BUILD)/json.o
