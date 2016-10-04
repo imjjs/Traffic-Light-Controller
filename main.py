@@ -70,9 +70,13 @@ if __name__ == '__main__':
 
         #minDuration, minWeThreshold, minNsThreshold = min(result, key = lambda x: x[0])
         #f.write("final:"+ str(minDuration) + ',' + str(minWeThreshold) + ',' + str(minNsThreshold))
+        if paraList[idx] != maxThreshold:
+            mark = True
 
         paraList[idx] = maxThreshold
         f.flush()
+        if idx + 1 == dim and mark == False:
+                break
         idx = (idx + 1) % dim
         time.sleep(10)
 
