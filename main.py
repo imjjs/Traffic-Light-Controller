@@ -43,6 +43,7 @@ if __name__ == '__main__':
 
     idx = 0
     while True:
+        mark = False
         print idx
 
         pool = multiprocessing.Pool(processes = CoreNumber,
