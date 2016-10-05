@@ -84,12 +84,6 @@ void Intersection::loadFromJson(std::string& filename) {
 		 	_minInterval = 50;
 			_maxInterval = 50;
 		}
-		else
-		{
-			_minInterval = __minInterval;
-			_maxInterval = __maxInterval;
-		}
-
 	//	std::cout << "Before adding state, no. of states: " << states.size() << std::endl << std::flush;
 		State _s = { _state, _phase, _minInterval, _maxInterval, _threshold};
         std::cout <<_s.stateRow<<','<<_s.phase<<','<<_s.minInterval<<','<<_s.maxInterval<<','<<_s.threshold<<std::endl<<std::flush;
