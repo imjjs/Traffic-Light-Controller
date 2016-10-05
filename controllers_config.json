@@ -4,49 +4,49 @@
             "0": {
                 "flows": "1100",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "1": {
                 "flows": "1100",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "2": {
                 "flows": "1100",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "3": {
                 "flows": "0000",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "4": {
                 "flows": "1011",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "5": {
                 "flows": "0001",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "6": {
                 "flows": "0001",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "7": {
                 "flows": "0000",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             }
         },
@@ -75,49 +75,49 @@
             "0": {
                 "flows": "1100",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "1": {
                 "flows": "1100",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "2": {
                 "flows": "1100",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "3": {
                 "flows": "0000",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "4": {
                 "flows": "0011",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "5": {
                 "flows": "0011",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "6": {
                 "flows": "0011",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "7": {
                 "flows": "0000",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             }
         },
@@ -146,49 +146,49 @@
             "0": {
                 "flows": "0110",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "1": {
                 "flows": "0110",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "2": {
                 "flows": "0110",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "3": {
                 "flows": "0000",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "4": {
                 "flows": "1001",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "5": {
                 "flows": "1001",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "6": {
                 "flows": "1001",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "7": {
                 "flows": "0000",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             }
         },
@@ -217,49 +217,49 @@
             "0": {
                 "flows": "0110",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "1": {
                 "flows": "0110",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "2": {
                 "flows": "0110",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "3": {
                 "flows": "0000",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "4": {
                 "flows": "1001",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "5": {
                 "flows": "1001",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "6": {
                 "flows": "1001",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "7": {
                 "flows": "0000",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             }
         },
@@ -288,37 +288,37 @@
             "0": {
                 "flows": "011",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "1": {
                 "flows": "011",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "2": {
                 "flows": "011",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "3": {
                 "flows": "000",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "4": {
                 "flows": "100",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "5": {
                 "flows": "000",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             }
         },
@@ -344,49 +344,49 @@
             "0": {
                 "flows": "1010",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "1": {
                 "flows": "1010",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "2": {
                 "flows": "1010",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "3": {
                 "flows": "0000",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "4": {
                 "flows": "0101",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "5": {
                 "flows": "0101",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "6": {
                 "flows": "0101",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "7": {
                 "flows": "0000",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             }
         },
@@ -415,49 +415,49 @@
             "0": {
                 "flows": "0110",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "1": {
                 "flows": "0110",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "2": {
                 "flows": "0110",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "3": {
                 "flows": "0000",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "4": {
                 "flows": "1111",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "5": {
                 "flows": "1000",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "6": {
                 "flows": "1000",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "7": {
                 "flows": "0000",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             }
         },
@@ -486,49 +486,49 @@
             "0": {
                 "flows": "1010",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "1": {
                 "flows": "1010",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "2": {
                 "flows": "1010",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "3": {
                 "flows": "0000",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "4": {
                 "flows": "0101",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "5": {
                 "flows": "0101",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "6": {
                 "flows": "0101",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "7": {
                 "flows": "0000",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             }
         },
@@ -557,49 +557,49 @@
             "0": {
                 "flows": "1100",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "1": {
                 "flows": "1100",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "2": {
                 "flows": "1100",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "3": {
                 "flows": "0000",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "4": {
                 "flows": "0011",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "5": {
                 "flows": "0011",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "6": {
                 "flows": "0011",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             },
             "7": {
                 "flows": "0000",
                 "minInterval": 200,
-                "maxInterval": 1200,
+                "maxInterval": 600,
                 "threshold": 12
             }
         },
