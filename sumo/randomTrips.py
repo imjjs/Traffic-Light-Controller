@@ -38,11 +38,11 @@ print "<trips>"
 print '  <vType accel="1.0" decel="5.0" id="Car" length="3.0" maxSpeed="100.0" sigma="0.0" />'
 
 periods = [
-  { 'fromHome': 125, # morning
-    'toHome': 25,
-    'intra': 75,
-    'length': 20,
-  },
+#  { 'fromHome': 125, # morning
+#    'toHome': 25,
+#    'intra': 75,
+#    'length': 20,
+#  },
   #{ 'fromHome': 25, # midday
   #  'toHome': 25,
   #  'intra': 75,
@@ -53,11 +53,11 @@ periods = [
  #   'intra': 75,
 #    'length': 20,
  # },  
- # { 'fromHome': 25, # night
-#    'toHome': 25,
-#    'intra': 50,
-#    'length': 60,
-#  },
+  { 'fromHome': 25, # night
+    'toHome': 25,
+    'intra': 50,
+    'length': 60,
+ },
 ]
 
 flowID = 0

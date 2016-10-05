@@ -36,6 +36,7 @@ if __name__ == '__main__':
     #log.LogTime = time.time()
     #with open('logtime','w') as f:
     #    f.write(str(log.LogTime))
+    count = 0
     dim = 19
     paraList = []
     for i in range(dim):
@@ -78,8 +79,10 @@ if __name__ == '__main__':
         if idx + 1 == dim and mark == False:
                 break
         idx = (idx + 1) % dim
+        count += dim
         time.sleep(10)
 
         print "sleeping at loot--------"
 
     print paraList
+    print count
