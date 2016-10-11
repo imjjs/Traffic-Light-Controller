@@ -18,11 +18,10 @@ def mytestWarp(tup):
     para = tup[1]
     idx = tup[2]
     para[idx] = tup[0]
-    sensor = ['S26']
     speed = 0.0
     while True:
         try:
-            speed = subprocess.check_output(["python", "test.py", str(para).replace(' ',''), '"' + str(sensor) + '"'] )#, stdout= DEVNULL, stderr = DEVNULL)
+            speed = subprocess.check_output(["python", "test.py", str(para).replace(' ','')] )#, stdout= DEVNULL, stderr = DEVNULL)
         except subprocess.CalledProcessError as grepexc:
             print "error code", grepexc.returncode, grepexc.output
             continue

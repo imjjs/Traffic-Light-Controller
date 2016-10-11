@@ -443,10 +443,8 @@ def simulationProcess(paraList, sumoMap, ignore = None):
 
 if __name__ == '__main__':
     #simulationProcess([0,5], '../sumo/Vanderbilt.sumo.cfg')
-    ignore = []
+    ignore = config.ignore_sensors
     raw_para = sys.argv[1]
-    if len(sys.argv) == 3:
-        ignore = ast.literal_eval(sys.argv[2])
     para = ast.literal_eval(raw_para)
     print  simulationProcess(para, './sumo/Vanderbilt.sumo.cfg',ignore)
     #print  simulationProcess([0,5,2,3,7,4,1,6,4,9], './sumo/Vanderbilt.sumo.cfg')
