@@ -388,7 +388,15 @@ def avgSpeed(filename):
     os.remove(filename)
     return avgspeed
 
-def simulationProcess(paraList, sumoMap):
+def findSensors():
+    ret = []
+    for i in selected_intersections:
+        sensors = intersection_info[i]['sensors']
+        for s in sensors:
+            ret.append(s)
+    return ret
+
+def simulationProcess(paraList, sumoMap, ignore = None):
     port = generator_ports()
     sumoProcess = subprocess.Popen(
         ["sumo", "-c", sumoMap, "--tripinfo-output", "tripinfo" + str(port) + ".xml",
@@ -413,6 +421,8 @@ def simulationProcess(paraList, sumoMap):
         for i in selected_intersections:
             sensors = intersection_info[i]['sensors']
             for s in sensors:
+                if s in ignore:
+                    continue
                 data = 0
                 # for t in range(sensor_num[s]):
                 #     data += traci.areal.getLastStepVehicleNumber(s + '#' + str(t))
@@ -433,8 +443,10 @@ def simulationProcess(paraList, sumoMap):
 
 if __name__ == '__main__':
     #simulationProcess([0,5], '../sumo/Vanderbilt.sumo.cfg')
-
+    ignore = []
     raw_para = sys.argv[1]
+    if len(sys.argv) == 3:
+        ignore = ast.literal_eval(sys.argv[2])
     para = ast.literal_eval(raw_para)
-    print  simulationProcess(para, './sumo/Vanderbilt.sumo.cfg')
+    print  simulationProcess(para, './sumo/Vanderbilt.sumo.cfg',ignore)
     #print  simulationProcess([0,5,2,3,7,4,1,6,4,9], './sumo/Vanderbilt.sumo.cfg')
