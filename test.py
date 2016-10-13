@@ -413,6 +413,7 @@ def simulationProcess(paraList, sumoMap, ignore = None):
         ins_phase = obj.phase
         ins_threshold = paraList[idx]
         test.setThreshold(ins_name, ins_threshold, ins_phase)
+    #test.debug()
 
     for s in range(50000):
         traci.simulationStep()
@@ -432,7 +433,42 @@ def simulationProcess(paraList, sumoMap, ignore = None):
             res = test.nextClockTick(i)
             ltState = phaseCodes[i][res]
             traci.trafficlights.setRedYellowGreenState('tl' + i[10:], ltState)
-            #test.debug()
+
+
+    traci.close()
+    sumoProcess.wait()
+    time.sleep(10)
+
+    return  durationAndDistance(port)
+
+def simulationProcess2( sumoMap, ignore = None):
+    port = generator_ports()
+    sumoProcess = subprocess.Popen(
+        ["sumo", "-c", sumoMap, "--tripinfo-output", "tripinfo" + str(port) + ".xml",
+         "--remote-port", str(port)], stdout= DEVNULL, stderr = DEVNULL)
+    time.sleep(10)
+
+    traci.init(port)
+    test.test_init()
+    test.debug()
+    for s in range(50000):
+        traci.simulationStep()
+        if not s % 10 == 0:
+            continue
+        for i in selected_intersections:
+            sensors = intersection_info[i]['sensors']
+            for s in sensors:
+                if s in ignore:
+                    continue
+                data = 0
+                # for t in range(sensor_num[s]):
+                #     data += traci.areal.getLastStepVehicleNumber(s + '#' + str(t))
+                data = traci.multientryexit.getLastStepVehicleNumber(s)
+                #print "data:" + str(data) + ', sensor:' + str(s)
+                test.handleTrafficSensorInput(s, data, i)
+            res = test.nextClockTick(i)
+            ltState = phaseCodes[i][res]
+            traci.trafficlights.setRedYellowGreenState('tl' + i[10:], ltState)
 
 
     traci.close()
@@ -444,6 +480,9 @@ def simulationProcess(paraList, sumoMap, ignore = None):
 if __name__ == '__main__':
     #simulationProcess([0,5], '../sumo/Vanderbilt.sumo.cfg')
     ignore = config.ignore_sensors
+    print sys.argv[1], sys.argv[2]
+    if len(sys.argv) == 3:
+        ignore = ast.literal_eval(sys.argv[2])
     raw_para = sys.argv[1]
     para = ast.literal_eval(raw_para)
     print  simulationProcess(para, './sumo/Vanderbilt.sumo.cfg',ignore)

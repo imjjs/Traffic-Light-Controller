@@ -198,7 +198,7 @@ std::string Intersection::run() {
 }
 
 std::string Intersection::run(double _current_time) {
-	assert(_current_time - currentTime > 0);
+	assert(_current_time - currentTime >= 0);
 	updateQLengthList();
 	if (true == control()) {
 		switchState();
@@ -216,7 +216,7 @@ void Intersection::print(){
 	std::cout<<"intersection:"<< name<<std::endl;
 	std::cout<<"currentIdx:"<<currentStateIdx<<std::endl;
 	std::cout<<"clock:"<<clock<<std::endl;
-	for(auto& s: sensors){
-		std::cout<<"sensors-"<<s<<":"<<sensorToQlength.at(s)<<std::endl;
+	for(auto& _s: states){
+		std::cout<<"states:"<<_s.stateRow<<','<<_s.phase<<','<<_s.minInterval<<','<<_s.maxInterval<<','<<_s.threshold<<std::endl<<std::flush;
 	}
 }
