@@ -33,7 +33,7 @@ if __name__ == '__main__':
         inputList.append((para, tmp))
     print inputList
     result = pool.map(warp,inputList)
-    result = map(warp, inputList)
+#    result = map(warp, inputList)
     pool.close()
     pool.join()
     print result
