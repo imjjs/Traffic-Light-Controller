@@ -20,22 +20,25 @@ def start_process():
 
 if __name__ == '__main__':
     raw_para = sys.argv[1]
+    num = int(sys.argv[2])
     para = ast.literal_eval(raw_para)
     sensors = test.findSensors()
-    ret = []
-    pool = multiprocessing.Pool(processes = CoreNumber,
-                            initializer = start_process)
-    inputList = []
+    ignore = []
+    for n in range(num):
+        ret = []
+        pool = multiprocessing.Pool(processes = CoreNumber,
+                                initializer = start_process)
+        inputList = []
 
-    for s in sensors:
-        tmp = []
-        tmp.append(s)
-        inputList.append((para, tmp))
-    print inputList
-    result = pool.map(warp,inputList)
-#    result = map(warp, inputList)
-    pool.close()
-    pool.join()
-    print result
-    speed, sensor = min(result, key = lambda x: x[0])
-    print speed, sensor
+        for s in sensors:
+            tmp = ignore + [s]
+            inputList.append((para, tmp))
+
+        result = pool.map(warp,inputList)
+    #    result = map(warp, inputList)
+        pool.close()
+        pool.join()
+        speed, sensor = min(result, key = lambda x: x[0])
+        print speed, sensor
+        ignore = sensor
+    print ignore
