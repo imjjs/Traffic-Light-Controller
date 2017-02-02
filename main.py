@@ -48,6 +48,7 @@ if __name__ == '__main__':
         for idx in range(dim):
             if not meta_param[idx].controller in config.blue:
                 continue
+            print idx
             pool = multiprocessing.Pool(processes = CoreNumber,
                                     initializer = start_process)
             inputList = []
