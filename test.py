@@ -373,6 +373,13 @@ def durationAndDistance(port):
     os.remove("tripinfo" + str(port) + ".xml")
     return totalDistance/ totalDuration
 
+import submap
+def submapUtility(port, name):
+    maps = submap.Submap.generate_submaps(os.path.join('submap','map.regions2.json'))
+    distance, avg = submap.get_matric(maps, 'dump' + str(port) +'.xml')
+    os.remove('dump' + str(port) +'.xml')
+    return distance[name]
+
 
 def avgSpeed(filename):
     xmlfile = open(filename, 'r')
@@ -399,7 +406,7 @@ def findSensors():
 def simulationProcess(paraList, sumoMap, ignore = None):
     port = generator_ports()
     sumoProcess = subprocess.Popen(
-        ["sumo", "-c", sumoMap, "--tripinfo-output", "tripinfo" + str(port) + ".xml",
+        ["sumo", "-c", sumoMap, "--tripinfo-output", "tripinfo" + str(port) + ".xml", "--netstate-dump", "dump" + str(port) + ".xml",
          "--remote-port", str(port)], stdout= DEVNULL, stderr = DEVNULL)
     time.sleep(10)
 
@@ -415,7 +422,7 @@ def simulationProcess(paraList, sumoMap, ignore = None):
         test.setThreshold(ins_name, ins_threshold, ins_phase)
     #test.debug()
 
-    for s in range(50000):
+    for s in range(10000):
         traci.simulationStep()
         if not s % 10 == 0:
             continue
@@ -439,7 +446,8 @@ def simulationProcess(paraList, sumoMap, ignore = None):
     sumoProcess.wait()
     time.sleep(10)
 
-    return  durationAndDistance(port)
+    return submapUtility(port, 'blue')
+    #return  durationAndDistance(port)
 
 def simulationProcess2( sumoMap, ignore = None):
     port = generator_ports()
@@ -480,7 +488,7 @@ def simulationProcess2( sumoMap, ignore = None):
 if __name__ == '__main__':
     #simulationProcess([0,5], '../sumo/Vanderbilt.sumo.cfg')
     ignore = config.ignore_sensors
-    print sys.argv[1], sys.argv[2]
+    print sys.argv[1]
     if len(sys.argv) == 3:
         ignore = ast.literal_eval(sys.argv[2])
     raw_para = sys.argv[1]

@@ -6,12 +6,12 @@ import multiprocessing
 import test
 import time
 import random
-
+import config
 
 CoreNumber = multiprocessing.cpu_count()
 
 TestPeriod = 36000
-testRange = (0, CoreNumber-1)
+testRange = (0, 30)
 stepLength = 1
 
 def mytestWarp(tup):
@@ -38,15 +38,16 @@ if __name__ == '__main__':
     #    f.write(str(log.LogTime))
     count = 0
     dim = 19
-    paraList = []
-    for i in range(dim):
-        paraList.append(testRange[1])
-
+    paraList = config.morning_opt
+    #for i in range(dim):
+    #    paraList.append(testRange[0])
+    meta_param = test.findPhase()
     idx = 0
     while True:
         mark = False
         for idx in range(dim):
-            print idx
+            if not meta_param[idx].controller in config.blue:
+                continue
             pool = multiprocessing.Pool(processes = CoreNumber,
                                     initializer = start_process)
             inputList = []
