@@ -446,7 +446,7 @@ def simulationProcess(paraList, sumoMap, ignore = None):
     sumoProcess.wait()
     time.sleep(10)
 
-    return submapUtility(port, 'blue')
+    return submapUtility(port, 'red')
     #return  durationAndDistance(port)
 
 def simulationProcess2( sumoMap, ignore = None):

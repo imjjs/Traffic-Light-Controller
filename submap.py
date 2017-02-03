@@ -5,6 +5,7 @@ try:
 except ImportError:
     import xml.etree.ElementTree as ET
 
+
 class Submap(object):
     def __init__(self, name, edges):
         self.name = name
@@ -37,26 +38,30 @@ def get_matric(maps, dumpfile):
  #   time['other'] = 0
 
     xmlfile = open(dumpfile, 'r')
-    xmlTree = ET.parse(xmlfile)
-    treeRoot = xmlTree.getroot()
-    stepNumber = len(treeRoot)
+    #xmlTree = ET.parse(xmlfile)
+    xmlTree = ET.iterparse(xmlfile,events=("start", "end"))
+   # treeRoot = xmlTree.getroot()
+   # stepNumber = len(treeRoot)
 
 
-
-    for step in range(stepNumber):
-        edges = treeRoot[step]
-        for edge in edges:
-            map_name = None
+    map_id = None
+    for event, node in xmlTree:
+        if event == 'start' and node.tag == 'edge':
             for m in maps:
-                if m.in_this_map(edge.attrib['id']):
-                    map_name = m.name
+                if m.in_this_map(node.attrib['id']):
+                    map_id = m.name
                     break
-            assert not map_name == None
-            for line in edge:
-                time[map_name] += len(line)
-                for car in line:
-                    speed = float(car.attrib['speed'])
-                    distance[map_name] += speed
+        elif event == 'start' and node.tag == 'vehicle':
+            assert not map_id == None
+            speed = float(node.attrib['speed'])
+            time[map_id] += 1
+            distance[map_id] += speed
+
+        elif event == 'end' and node.tag == 'edge':
+            map_id = None
+
+        node.clear()
+
 
     xmlfile.close()
     g_distance = 0
@@ -68,7 +73,7 @@ def get_matric(maps, dumpfile):
     return distance, g_distance/g_time
 
 if __name__ == '__main__':
-    maps = Submap.generate_submaps(os.path.join('submap','map.regions3.json'))
+    maps = Submap.generate_submaps(os.path.join('submap','map.regions2.json'))
     import sys
     distance, avg = get_matric(maps, sys.argv[1])
     print distance, avg

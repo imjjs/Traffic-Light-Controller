@@ -11,8 +11,8 @@ import config
 CoreNumber = multiprocessing.cpu_count()
 
 TestPeriod = 36000
-testRange = (0, 30)
-stepLength = 1
+testRange = (0, 26)
+stepLength = 2
 
 def mytestWarp(tup):
     para = tup[1]
@@ -46,7 +46,7 @@ if __name__ == '__main__':
     while True:
         mark = False
         for idx in range(dim):
-            if not meta_param[idx].controller in config.blue:
+            if not meta_param[idx].controller in config.red:
                 continue
             print idx
             pool = multiprocessing.Pool(processes = CoreNumber,
