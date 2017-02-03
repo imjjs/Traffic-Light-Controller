@@ -378,6 +378,7 @@ def submapUtility(port, name):
     maps = submap.Submap.generate_submaps(os.path.join('submap','map.regions2.json'))
     distance, avg = submap.get_matric(maps, 'dump' + str(port) +'.xml')
     os.remove('dump' + str(port) +'.xml')
+    os.remove('tripinfo' + str(port) + '.xml')
     return distance[name]
 
 
