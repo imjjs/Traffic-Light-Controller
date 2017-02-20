@@ -377,9 +377,10 @@ import submap
 def submapUtility(port, name):
     maps = submap.Submap.generate_submaps(os.path.join('submap','map.regions2.json'))
     distance, avg = submap.get_matric(maps, 'dump' + str(port) +'.xml')
-    os.remove('dump' + str(port) +'.xml')
+    #os.remove('dump' + str(port) +'.xml')
     os.remove('tripinfo' + str(port) + '.xml')
-    return distance[name]
+    #return distance[name]
+    return avg
 
 
 def avgSpeed(filename):
@@ -447,7 +448,7 @@ def simulationProcess(paraList, sumoMap, ignore = None):
     sumoProcess.wait()
     time.sleep(10)
 
-    return submapUtility(port, 'red')
+    return submapUtility(port, 'blue')
     #return  durationAndDistance(port)
 
 def simulationProcess2( sumoMap, ignore = None):
@@ -489,7 +490,7 @@ def simulationProcess2( sumoMap, ignore = None):
 if __name__ == '__main__':
     #simulationProcess([0,5], '../sumo/Vanderbilt.sumo.cfg')
     ignore = config.ignore_sensors
-    print sys.argv[1]
+    #print sys.argv[1]
     if len(sys.argv) == 3:
         ignore = ast.literal_eval(sys.argv[2])
     raw_para = sys.argv[1]
