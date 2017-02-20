@@ -2,6 +2,7 @@
 
 from random import seed, random, sample
 import xml.etree.ElementTree as ElementTree
+import time
 
 fromHome = [
   "19479801#0",
@@ -19,7 +20,7 @@ toHome = [
   "-41139605#0",
 ]
 
-seed(0)
+seed(time.time())
 
 tree = ElementTree.parse("Vanderbilt.net.xml")
 root = tree.getroot()
