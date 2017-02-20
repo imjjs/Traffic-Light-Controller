@@ -27,7 +27,7 @@ def mytestWarp(tup):
     for map in config.maps:
         while True:
             try:
-                speed += subprocess.check_output(["python", "test.py", str(para).replace(' ',''), map, name])#, stdout= DEVNULL, stderr = DEVNULL)
+                speed += float(subprocess.check_output(["python", "test.py", str(para).replace(' ',''), map, name]))#, stdout= DEVNULL, stderr = DEVNULL)
             except subprocess.CalledProcessError as grepexc:
                 print "error code", grepexc.returncode, grepexc.output
                 continue
@@ -126,4 +126,5 @@ if __name__ == '__main__':
             new_para = tuple(find_opt(para, filters[p], p, i, 'morning'))
             if new_para != para:
                 mark_equilibrium = False
+            para = new_para
         i += 1
