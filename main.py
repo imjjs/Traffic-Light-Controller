@@ -111,7 +111,7 @@ if __name__ == '__main__':
         'red': isRed,
         'orange': isOrange,
         'blue': isBlue,
-        'gloable' : isGloable,
+        'global' : isGloable,
     }
 
     para = (5, 6, 13, 1, 1, 2, 22, 13, 9, 16, 20, 19, 6, 10, 4, 25, 1, 22, 0)
