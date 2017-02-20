@@ -24,8 +24,8 @@ def mytestWarp(tup):
     name = tup[3]
     para[idx] = tup[0]
     speed = 0.0
-    while True:
-        for map in config.maps:
+    for map in config.maps:
+        while True:
             try:
                 speed += subprocess.check_output(["python", "test.py", str(para).replace(' ',''), map, name])#, stdout= DEVNULL, stderr = DEVNULL)
             except subprocess.CalledProcessError as grepexc:
