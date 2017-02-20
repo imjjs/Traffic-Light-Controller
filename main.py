@@ -15,18 +15,19 @@ TestPeriod = 36000
 testRange = (0, 30)
 stepLength = 1
 
-PLAYER = ''
+
 dim = 19
 
 def mytestWarp(tup):
     para = tup[1]
     idx = tup[2]
+    name = tup[3]
     para[idx] = tup[0]
     speed = 0.0
     while True:
         for map in config.maps:
             try:
-                speed += subprocess.check_output(["python", "test.py", str(para).replace(' ',''), map, PLAYER])#, stdout= DEVNULL, stderr = DEVNULL)
+                speed += subprocess.check_output(["python", "test.py", str(para).replace(' ',''), map, name])#, stdout= DEVNULL, stderr = DEVNULL)
             except subprocess.CalledProcessError as grepexc:
                 print "error code", grepexc.returncode, grepexc.output
                 continue
@@ -39,7 +40,6 @@ def start_process():
 
 def find_opt(para, filter, name, iter, secnario):
     direct = secnario + '_' + name + str(iter)
-    PLAYER = name
     paraList = list(para)
     try:
         os.makedirs(direct)
@@ -63,7 +63,7 @@ def find_opt(para, filter, name, iter, secnario):
             inputList = []
 
             for i in range(testRange[0], testRange[1], stepLength):
-                inputList.append((i, paraList, idx))
+                inputList.append((i, paraList, idx, name))
 
             result = pool.map(mytestWarp, inputList)
             # result = map(mytestWarp, inputList)
