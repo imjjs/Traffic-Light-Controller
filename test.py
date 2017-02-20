@@ -375,7 +375,7 @@ def durationAndDistance(port):
 
 import submap
 def submapUtility(port, name):
-    maps = submap.Submap.generate_submaps(os.path.join('submap','map.regions3.json'))
+    maps = submap.Submap.generate_submaps(os.path.join('submap', config.submap_region))
     distance, avg = submap.get_matric(maps, 'dump' + str(port) +'.xml')
     os.remove('dump' + str(port) +'.xml')
     os.remove('tripinfo' + str(port) + '.xml')
@@ -500,5 +500,5 @@ if __name__ == '__main__':
     if len(sys.argv) >= 4:
         print  simulationProcess(para, sumoMap = sys.argv[2], player = sys.argv[3], ignore = ignore)
     else:
-        print  simulationProcess(para, sumoMap = './sumo/Vanderbilt.sumo.cfg', player = sys.argv[3], ignore = ignore)
+        print  simulationProcess(para, sumoMap = './sumo/Vanderbilt.sumo.cfg', player = 'global', ignore = ignore)
     #print  simulationProcess([0,5,2,3,7,4,1,6,4,9], './sumo/Vanderbilt.sumo.cfg')
