@@ -38,7 +38,7 @@ def start_process():
     pass
 
 def find_opt(para, filter, name, iter, secnario):
-    direct = secnario + '_' + name + iter
+    direct = secnario + '_' + name + str(iter)
     PLAYER = name
     paraList = list(para)
     try:
