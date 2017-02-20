@@ -375,12 +375,14 @@ def durationAndDistance(port):
 
 import submap
 def submapUtility(port, name):
-    maps = submap.Submap.generate_submaps(os.path.join('submap','map.regions2.json'))
+    maps = submap.Submap.generate_submaps(os.path.join('submap','map.regions3.json'))
     distance, avg = submap.get_matric(maps, 'dump' + str(port) +'.xml')
-    #os.remove('dump' + str(port) +'.xml')
+    os.remove('dump' + str(port) +'.xml')
     os.remove('tripinfo' + str(port) + '.xml')
-    #return distance[name]
-    return avg
+    if 'global' == name:
+        return avg
+    else:
+        return distance[name]
 
 
 def avgSpeed(filename):
@@ -405,7 +407,7 @@ def findSensors():
             ret.append(s)
     return ret
 
-def simulationProcess(paraList, sumoMap, ignore = None):
+def simulationProcess(paraList, sumoMap, player, ignore = None):
     port = generator_ports()
     sumoProcess = subprocess.Popen(
         ["sumo", "-c", sumoMap, "--tripinfo-output", "tripinfo" + str(port) + ".xml", "--netstate-dump", "dump" + str(port) + ".xml",
@@ -448,7 +450,7 @@ def simulationProcess(paraList, sumoMap, ignore = None):
     sumoProcess.wait()
     time.sleep(10)
 
-    return submapUtility(port, 'blue')
+    return submapUtility(port, player)
     #return  durationAndDistance(port)
 
 def simulationProcess2( sumoMap, ignore = None):
@@ -491,9 +493,12 @@ if __name__ == '__main__':
     #simulationProcess([0,5], '../sumo/Vanderbilt.sumo.cfg')
     ignore = config.ignore_sensors
     #print sys.argv[1]
-    if len(sys.argv) == 3:
-        ignore = ast.literal_eval(sys.argv[2])
+    if len(sys.argv) == 5:
+        ignore = ast.literal_eval(sys.argv[4])
     raw_para = sys.argv[1]
     para = ast.literal_eval(raw_para)
-    print  simulationProcess(para, './sumo/Vanderbilt.sumo.cfg',ignore)
+    if len(sys.argv) >= 4:
+        print  simulationProcess(para, sumoMap = sys.argv[2], player = sys.argv[3], ignore = ignore)
+    else:
+        print  simulationProcess(para, sumoMap = './sumo/Vanderbilt.sumo.cfg', player = sys.argv[3], ignore = ignore)
     #print  simulationProcess([0,5,2,3,7,4,1,6,4,9], './sumo/Vanderbilt.sumo.cfg')
