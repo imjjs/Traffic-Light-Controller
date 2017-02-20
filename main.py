@@ -26,7 +26,7 @@ def mytestWarp(tup):
     while True:
         for map in config.maps:
             try:
-                speed += subprocess.check_output(["python", "test.py", str(para).replace(' ','')], map, PLAYER)#, stdout= DEVNULL, stderr = DEVNULL)
+                speed += subprocess.check_output(["python", "test.py", str(para).replace(' ',''), map, PLAYER])#, stdout= DEVNULL, stderr = DEVNULL)
             except subprocess.CalledProcessError as grepexc:
                 print "error code", grepexc.returncode, grepexc.output
                 continue
