@@ -120,10 +120,10 @@ if __name__ == '__main__':
         'global' : isGloable,
     }
 
-    para = (5, 6, 13, 1, 1, 2, 22, 13, 9, 16, 20, 19, 6, 10, 4, 25, 1, 22, 0)
+    para = (0, 2, 18, 1, 1, 2, 22, 9, 9, 16, 20, 19, 0, 10, 5, 25, 1, 26, 0)
 
-    #players = ['blue', 'red', 'orange']
-    players = ['global']
+    players = ['blue', 'red', 'orange']
+    #players = ['global']
     i = 0
     mark_equilibrium = False
     while False == mark_equilibrium:
