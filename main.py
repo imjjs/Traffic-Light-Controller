@@ -81,13 +81,19 @@ def find_opt(para, filter, name, iter, secnario):
             # minDuration, minWeThreshold, minNsThreshold = min(result, key = lambda x: x[0])
             # f.write("final:"+ str(minDuration) + ',' + str(minWeThreshold) + ',' + str(minNsThreshold))
             if paraList[idx] != maxThreshold:
+                print "paraList[idx]:", paraList[idx]
+                print "maxThreshold:", maxThreshold
+                print "mark == True"
                 mark = True
+            else:
+                print "mark unchanged"
 
             paraList[idx] = maxThreshold
             f.flush()
             time.sleep(10)
             print "sleeping at loot--------"
         if False == mark:
+            print "One round, Mark:", mark
             break
         return paraList[:]
 if __name__ == '__main__':
