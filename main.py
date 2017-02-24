@@ -121,7 +121,7 @@ if __name__ == '__main__':
 
     para = (0, 2, 18, 1, 1, 2, 22, 9, 9, 16, 20, 19, 0, 10, 5, 25, 1, 26, 0)
 
-    players = ['blue', 'red', 'orange']
+    players = ['blue']#, 'red', 'orange']
     #players = ['global']
     i = 0
     mark_equilibrium = False

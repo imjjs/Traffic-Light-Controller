@@ -7,17 +7,17 @@ class Param(object):
         return 'controller:' + self.controller + ', phase:' + str(self.phase)
 
 
-maps = ['./sumo/Vanderbilt.sumo.cfg', './sumo/Vanderbilt1.sumo.cfg', './sumo/Vanderbilt2.sumo.cfg']
+maps = ['./sumo/Vanderbilt.sumo.cfg']#, './sumo/Vanderbilt1.sumo.cfg', './sumo/Vanderbilt2.sumo.cfg']
 ignore_sensors = []
 #region2
-#blue = ["Controller1443088096", "Controller202305800", "Controller202407913", "Controller202514063", "Controller202514074"]
-#red = ["Controller1443088101", "Controller202270699", "Controller202514078", "Controller3010263944"]
+blue = ["Controller1443088096", "Controller202305800", "Controller202407913", "Controller202514063", "Controller202514074"]
+red = ["Controller1443088101", "Controller202270699", "Controller202514078", "Controller3010263944"]
 
 #region3
-red = ["Controller1443088096","Controller202514074", "Controller202514078", "Controller3010263944"]
+# red = ["Controller1443088096","Controller202514074", "Controller202514078", "Controller3010263944"]
 orange = ["Controller202305800", "Controller202407913", "Controller202514063"]
-blue = ["Controller1443088101", "Controller202270699", ]
-submap_region = 'map.regions3.json'
+# blue = ["Controller1443088101", "Controller202270699", ]
+submap_region = 'map.regions2.json'
 morning_opt = [5, 6, 8, 1, 1, 0, 7, 10, 9, 12, 21, 15, 6, 11, 5, 25, 1, 22, 0]
 afternoon_opt =[3, 9, 18, 4, 4, 0, 22, 16, 10, 29, 30, 13, 6, 15, 6, 26, 6, 26, 8]
 night_opt = [1, 1, 2, 0, 0, 0, 2, 4, 2, 2, 8, 11, 0, 1, 1, 0, 1, 3, 0]

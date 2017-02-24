@@ -382,7 +382,7 @@ def submapUtility(port, name):
     if 'global' == name:
         return avg
     else:
-        return distance[name]
+        return -distance['red']
 
 
 def avgSpeed(filename):
