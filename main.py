@@ -50,8 +50,9 @@ def find_opt(para, filter, name, iter, secnario):
     #    paraList.append(testRange[0])
     meta_param = test.findPhase()
     idx = 0
-    while True:
-        mark = False
+    mark_opt = False
+    while mark_opt == False:
+        mark_opt = True
         for idx in range(dim):
             # if not meta_param[idx].controller in config.blue:
             #    continue
@@ -83,19 +84,17 @@ def find_opt(para, filter, name, iter, secnario):
             if paraList[idx] != maxThreshold:
                 print "paraList[idx]:", paraList[idx]
                 print "maxThreshold:", maxThreshold
-                print "mark == True"
-                mark = True
+                print "mark_opt == False"
+                mark_opt = False
             else:
-                print "mark unchanged"
+                print "mark unchanged:",mark_opt
 
             paraList[idx] = maxThreshold
             f.flush()
             time.sleep(10)
             print "sleeping at loot--------"
-        if False == mark:
-            print "One round, Mark:", mark
-            break
-        return paraList[:]
+        print "One round, Mark:", mark_opt
+    return paraList[:]
 if __name__ == '__main__':
     #log.LogTime = time.time()
     #with open('logtime','w') as f:
