@@ -119,7 +119,7 @@ if __name__ == '__main__':
         'global' : isGloable,
     }
 
-    para = (0, 2, 18, 1, 1, 2, 22, 9, 9, 16, 20, 19, 0, 10, 5, 25, 1, 26, 0)
+    para = (3, 1, 10, 5, 4, 0, 14, 6, 0, 18, 18, 0, 0, 16, 2, 13, 1, 20, 0)
 
     players = ['blue', 'red', 'orange']
     #players = ['global']

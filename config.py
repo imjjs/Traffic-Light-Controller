@@ -7,7 +7,7 @@ class Param(object):
         return 'controller:' + self.controller + ', phase:' + str(self.phase)
 
 
-maps = ['./sumo/Vanderbilt.sumo.cfg', './sumo/Vanderbilt1.sumo.cfg', './sumo/Vanderbilt2.sumo.cfg']
+maps = ['./sumo/Vanderbilt.sumo.cfg']#, './sumo/Vanderbilt1.sumo.cfg', './sumo/Vanderbilt2.sumo.cfg']
 ignore_sensors = []
 #region2
 #blue = ["Controller1443088096", "Controller202305800", "Controller202407913", "Controller202514063", "Controller202514074"]
