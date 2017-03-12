@@ -73,7 +73,7 @@ def get_matric(maps, dumpfile):
     return distance, g_distance/g_time
 
 if __name__ == '__main__':
-    maps = Submap.generate_submaps(os.path.join('submap','map.regions3.json'))
+    maps = Submap.generate_submaps(os.path.join('submap','map.regions2.json'))
     import sys
     distance, avg = get_matric(maps, sys.argv[1])
     print distance, avg
