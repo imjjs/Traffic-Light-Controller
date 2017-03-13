@@ -9,7 +9,7 @@ import random
 import config
 import os
 
-CoreNumber = multiprocessing.cpu_count()
+CoreNumber = 1 #multiprocessing.cpu_count()
 
 TestPeriod = 36000
 testRange = (0, 30)
@@ -32,6 +32,7 @@ def mytestWarp(tup):
                 print "error code", grepexc.returncode, grepexc.output
                 continue
             break
+	print "speed, len: ", speed, len(config.maps)
     return (float(speed)/len(config.maps), int(tup[0]))
 
 
@@ -119,8 +120,8 @@ if __name__ == '__main__':
         'global' : isGloable,
     }
 
-    para = (3, 1, 10, 5, 4, 0, 14, 6, 0, 18, 18, 0, 0, 16, 2, 13, 1, 20, 0)
-
+    #para = (3, 1, 10, 5, 4, 0, 14, 6, 0, 18, 18, 0, 0, 16, 2, 13, 1, 20, 0)
+    para = (3, 0, 9, 1, 0, 0, 10, 7, 0, 6, 5, 5, 0, 12, 0, 20, 0, 14, 0)
     players = ['blue', 'red', 'orange']
     #players = ['global']
     i = 0

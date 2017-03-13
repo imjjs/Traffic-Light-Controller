@@ -377,8 +377,10 @@ import submap
 def submapUtility(port, name):
     maps = submap.Submap.generate_submaps(os.path.join('submap', config.submap_region))
     distance, avg = submap.get_matric(maps, 'dump' + str(port) +'.xml')
-    #os.remove('dump' + str(port) +'.xml')
-    #os.remove('tripinfo' + str(port) + '.xml')
+    os.remove('dump' + str(port) +'.xml')
+    os.remove('tripinfo' + str(port) + '.xml')
+    #f = open("utility"+str(port)+".txt","w")
+    #f.write(str(avg) + '\n' + str(distance))
     if 'global' == name:
         return avg
     else:
