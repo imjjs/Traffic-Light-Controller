@@ -5,6 +5,20 @@ import subprocess
 import multiprocessing
 CoreNumber = multiprocessing.cpu_count()
 
+# 7.43831580425 ['S13']
+# 7.29340079266 ['S13', 'S11']
+# 7.01890996251 ['S13', 'S11', 'S3']
+# 6.80244044947 ['S13', 'S11', 'S3', 'S4']
+# 6.75945203967 ['S13', 'S11', 'S3', 'S4', 'S10']
+
+
+
+
+
+
+
+
+
 def warp(tup):
     para = tup[0]
     s = tup[1]
