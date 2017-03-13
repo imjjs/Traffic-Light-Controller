@@ -10,8 +10,15 @@ def warp(tup):
     s = tup[1]
     #print ' '.join(["python", "test.py", str(para).replace(' ','') , '"' + str(s) +'"'])
     #speed = subprocess.check_output(["python", "test.py", "'" + str(para).replace(' ','') + "'" , '"' + str(s) +'"'])
-    speed = float(subprocess.check_output(["python", "test.py", str(para).replace(' ', ''), map, 'global', str(s).replace(' ', '')]))
-    speed = test.simulationProcess(para,  './sumo/Vanderbilt.sumo.cfg', s)
+    while True:
+        try:
+            speed = float(subprocess.check_output(["python", "test.py", str(para).replace(' ', ''), './sumo/Vanderbilt.sumo.cfg', 'global', str(s).replace(' ', '')]))
+        except subprocess.CalledProcessError as grepexc:
+            print "error code", grepexc.returncode, grepexc.output
+            continue
+        break
+
+    #speed = test.simulationProcess(para,  './sumo/Vanderbilt.sumo.cfg', s)
     return (speed, s)
 
 def start_process():
