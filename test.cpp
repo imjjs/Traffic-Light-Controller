@@ -14,7 +14,7 @@ using namespace std;
 string jsonFile = "controllers_config.json";
 vector<Intersection*> intersections;
 map<string, Intersection*> ins_dict;
-vector<string> selected_intersections {"Controller202407913", "Controller1443088096", "Controller202514078", "Controller3010263944", "Controller1443088101"};
+vector<string> selected_intersections {"Controller202407913", "Controller1443088096", "Controller202514078", "Controller3010263944", "Controller1443088101", "Controller202270699"};
 extern "C" {
 void test_init()
 {
