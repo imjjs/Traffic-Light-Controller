@@ -15,7 +15,8 @@ static std::map<std::string, std::vector<std::string> > phaseCodes {
 {"Controller1443088096",{"GGGGggrrGGGGggrrrr", "yyyyggrryyyyggrrrr", "rrrrGGrrrrrrGGrrrr", "rrrryyrrrrrryyrrrr", "GrrrrrGGrrrrrrGGgg", "yrrrrryyrrrrrryygg", "rrrrrrrrrrrrrrrrGG", "rrrrrrrrrrrrrrrryy"}},
 {"Controller202514078",{"GGGGggrrrrGGGGggrrrr", "yyyyggrrrryyyyggrrrr", "rrrrGGrrrrrrrrGGrrrr", "rrrryyrrrrrrrryyrrrr", "rrrrrrGGggrrrrrrGGgg", "rrrrrryyggrrrrrryygg", "rrrrrrrrGGrrrrrrrrGG", "rrrrrrrryyrrrrrrrryy"}},
 {"Controller3010263944",{"GGggrrrrrGGggrrrrr", "yyggrrrrryyggrrrrr", "rrGGrrrrrrrGGrrrrr", "rryyrrrrrrryyrrrrr", "rrrrGGGggrrrrGGGgg", "rrrryyyggrrrryyygg", "rrrrrrrGGrrrrrrrGG", "rrrrrrryyrrrrrrryy"}},
-{"Controller1443088101",{"GGGggrrrrGGGggrrrr", "yyyggrrrryyyggrrrr", "rrrGGrrrrrrrGGrrrr", "rrryyrrrrrrryyrrrr", "rrrrrGGggrrrrrGGgg", "rrrrryyggrrrrryygg", "rrrrrrrGGrrrrrrrGG", "rrrrrrryyrrrrrrryy"}}
+{"Controller1443088101",{"GGGggrrrrGGGggrrrr", "yyyggrrrryyyggrrrr", "rrrGGrrrrrrrGGrrrr", "rrryyrrrrrrryyrrrr", "rrrrrGGggrrrrrGGgg", "rrrrryyggrrrrryygg", "rrrrrrrGGrrrrrrrGG", "rrrrrrryyrrrrrrryy"}},
+{"Controller202270699",{"GGGGgrrrGGGggrrr", "yyyygrrryyyggrrr", "rrrrGrrrrrrGGrrr", "rrrryrrrrrryyrrr", "rrrrrGGgrrrrrGgg", "rrrrryygrrrrrygg", "rrrrrrrGrrrrrrGG", "rrrrrrryrrrrrryy"}}
 };
 class parseException {};
 
