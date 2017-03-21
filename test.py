@@ -21,7 +21,7 @@ except ImportError:
 PORT_LOCK = Lock()
 DEVNULL = open(os.devnull, "w")
 
-selected_intersections =  ["Controller202407913" , "Controller1443088096", "Controller202514078", "Controller3010263944", "Controller1443088101"];
+selected_intersections =  ["Controller202407913" , "Controller1443088096", "Controller202514078", "Controller3010263944", "Controller1443088101", "Controller202270699"];
 phaseCodes = {
 "Controller202407913":["GGGggGGGGgrrrr", "yyyggyyyygrrrr", "rrrGGrrrrGrrrr", "rrryyrrrryrrrr", "rrrrrrrrrrGGGG", "rrrrrrrrrryyyy"],
 "Controller1443088096":["GGGGggrrGGGGggrrrr", "yyyyggrryyyyggrrrr", "rrrrGGrrrrrrGGrrrr", "rrrryyrrrrrryyrrrr", "GrrrrrGGrrrrrrGGgg", "yrrrrryyrrrrrryygg", "rrrrrrrrrrrrrrrrGG", "rrrrrrrrrrrrrrrryy"],

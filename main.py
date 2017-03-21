@@ -9,7 +9,7 @@ import random
 import config
 import os
 
-CoreNumber = 1 #multiprocessing.cpu_count()
+CoreNumber = multiprocessing.cpu_count()
 
 TestPeriod = 36000
 testRange = (0, 30)
@@ -75,7 +75,7 @@ def find_opt(para, filter, name, iter, secnario):
             f = open(direct + "/intersection" + str(idx) + ".txt", "a")
             for i in result:
                 print i[0], i[1]
-                f.write(str(i[0]) + str(i[1]) + '\n')
+                f.write(str(i[0]) +','+ str(i[1]) + '\n')
 
             maxSpeed, maxThreshold = max(result, key=lambda x: x[0])
             f.write("final:" + str(maxSpeed) + ',' + str(maxThreshold) + ',' + str(paraList))
@@ -120,10 +120,10 @@ if __name__ == '__main__':
         'global' : isGloable,
     }
 
-    #para = (3, 1, 10, 5, 4, 0, 14, 6, 0, 18, 18, 0, 0, 16, 2, 13, 1, 20, 0)
-    para = (3, 0, 9, 1, 0, 0, 10, 7, 0, 6, 5, 5, 0, 12, 0, 20, 0, 14, 0)
-    players = ['blue', 'red', 'orange']
-    #players = ['global']
+    para = (1, 0, 9, 1, 0, 0, 25, 15, 14, 5, 8, 0, 0, 18, 0, 10, 1, 20, 0)
+    #para = (3, 0, 9, 1, 0, 0, 10, 7, 0, 6, 5, 5, 0, 12, 0, 20, 0, 14, 0)
+    #players = ['blue', 'red']    #, 'orange']
+    players = ['global']
     i = 0
     mark_equilibrium = False
     while False == mark_equilibrium:
