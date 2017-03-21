@@ -16,7 +16,7 @@ testRange = (0, 30)
 stepLength = 1
 
 
-dim = 19
+dim = 23
 
 def mytestWarp(tup):
     para = tup[1]
@@ -120,7 +120,7 @@ if __name__ == '__main__':
         'global' : isGloable,
     }
 
-    para = (1, 0, 9, 1, 0, 0, 25, 15, 14, 5, 8, 0, 0, 18, 0, 10, 1, 20, 0)
+    para = (1, 0, 9, 1, 0, 0, 25, 15, 14, 5, 8, 0, 0, 18, 0, 10, 1, 20, 0, 0, 0, 0, 0)
     #para = (3, 0, 9, 1, 0, 0, 10, 7, 0, 6, 5, 5, 0, 12, 0, 20, 0, 14, 0)
     #players = ['blue', 'red']    #, 'orange']
     players = ['global']
