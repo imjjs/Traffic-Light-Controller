@@ -10,8 +10,8 @@ class Param(object):
 maps = ['./sumo/Vanderbilt.sumo.cfg'] #, './sumo/Vanderbilt1.sumo.cfg', './sumo/Vanderbilt2.sumo.cfg']
 ignore_sensors = []
 #region2
-blue = ["Controller1443088096", "Controller202305800", "Controller202407913", "Controller202514063", "Controller202514074"]
-red = ["Controller1443088101", "Controller202270699", "Controller202514078", "Controller3010263944"]
+blue = ["Controller1443088096", "Controller202305800", "Controller202407913", "Controller202514063", "Controller202514074", "Controller202514078"]
+red = ["Controller1443088101", "Controller202270699",  "Controller3010263944"]
 
 #region3
 #red = ["Controller1443088096","Controller202514074", "Controller202514078", "Controller3010263944"]
