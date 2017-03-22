@@ -60,11 +60,11 @@ void Intersection::loadFromJson(std::string& filename) {
 	    //std::cout << "Parsing was successful" << std::endl;
 	}
 	Json::Value controllor = root[name];
-        std::cout<<"name:"<<name<<std::endl;
+        //std::cout<<"name:"<<name<<std::endl;
 	Json::Value jsonStates = controllor["phases"];
 	std::vector<std::string> phaseList;
 	for (int i = 0; i < jsonStates.size(); ++i) {
-                std::cout<<jsonStates[i].asString()<<std::endl;
+               // std::cout<<jsonStates[i].asString()<<std::endl;
 		phaseList.push_back(jsonStates[i].asString());
 	}
 	int _minInterval, _maxInterval;
@@ -74,7 +74,7 @@ void Intersection::loadFromJson(std::string& filename) {
 
 	for (int i = 0; i < phaseList.size(); ++i) {
 		std::string _phase = phaseList[i];
-		std::cout << "_phase = " << _phase << " and controller[PhaseToState][_phase] = " << controllor["PhaseDescriptor"][_phase]["flows"].asString() << std::endl << std::flush;
+		//std::cout << "_phase = " << _phase << " and controller[PhaseToState][_phase] = " << controllor["PhaseDescriptor"][_phase]["flows"].asString() << std::endl << std::flush;
         Json::Value phase_desc = controllor["PhaseDescriptor"][_phase];
 		std::string _state = phase_desc["flows"].asString();
 

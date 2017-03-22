@@ -429,7 +429,7 @@ def simulationProcess(paraList, sumoMap, player, ignore = None):
         ins_phase = obj.phase
         ins_threshold = paraList[idx]
         test.setThreshold(ins_name, ins_threshold, ins_phase)
-        test.debug()
+        #test.debug()
     #print "after seeting threshold"
     for s in range(10000):
         traci.simulationStep()

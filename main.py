@@ -123,8 +123,8 @@ if __name__ == '__main__':
     para = (2, 0, 3, 1, 0, 3, 29, 9, 11, 13, 0, 4, 0, 15, 0, 0, 1, 14, 0, 0, 0, 0, 0)
 #(1, 0, 9, 1, 0, 0, 25, 15, 14, 5, 8, 0, 0, 18, 0, 10, 1, 20, 0, 0, 0, 0, 0)
     #para = (3, 0, 9, 1, 0, 0, 10, 7, 0, 6, 5, 5, 0, 12, 0, 20, 0, 14, 0)
-    players = ['blue', 'red']    #, 'orange']
-    #players = ['global']
+    #players = ['blue', 'red']    #, 'orange']
+    players = ['global']
     i = 0
     mark_equilibrium = False
     while False == mark_equilibrium:
