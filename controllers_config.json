@@ -1,6 +1,6 @@
 {
   "Controller202270699": {
-    "PhaseToState": {
+    "PhaseDescriptor": {
       "0": {
         "threshold": 12,
         "maxInterval": 600,
