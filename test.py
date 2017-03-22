@@ -419,8 +419,8 @@ def simulationProcess(paraList, sumoMap, player, ignore = None):
 
     traci.init(port)
     meta_param = findPhase()
-    print "meta_param,", len(meta_param)
-    print "paraList,", len(paraList)
+    #print "meta_param,", len(meta_param)
+    #print "paraList,", len(paraList)
     assert(len(meta_param) == len(paraList))
     test.test_init()
     for idx in range(len(meta_param)):
@@ -430,7 +430,7 @@ def simulationProcess(paraList, sumoMap, player, ignore = None):
         ins_threshold = paraList[idx]
         test.setThreshold(ins_name, ins_threshold, ins_phase)
         test.debug()
-    print "after seeting threshold"
+    #print "after seeting threshold"
     for s in range(10000):
         traci.simulationStep()
         if not s % 10 == 0:
