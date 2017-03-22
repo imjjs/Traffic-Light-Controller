@@ -60,6 +60,7 @@ void Intersection::loadFromJson(std::string& filename) {
 	    //std::cout << "Parsing was successful" << std::endl;
 	}
 	Json::Value controllor = root[name];
+        std::cout<<"name:"<<name<<std::endl;
 	Json::Value jsonStates = controllor["phases"];
 	std::vector<std::string> phaseList;
 	for (int i = 0; i < jsonStates.size(); ++i) {
