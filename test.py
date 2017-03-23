@@ -368,12 +368,12 @@ def durationAndDistance(port):
     totalDuration = 0
     totalDistance = 0
     carNumber = len(treeRoot)
+    speed = []
     for child in treeRoot:
-        totalDuration += float(child.attrib['duration'])
-        totalDistance += float(child.attrib['routeLength'])
+        speed.append(2.23694 * float(child.attrib['routeLength'])/float(child.attrib['duration']))
     xmlfile.close()
     os.remove("tripinfo" + str(port) + ".xml")
-    return totalDistance/ totalDuration
+    return sum(speed)/len(speed)
 
 import submap
 def submapUtility(port, name):
@@ -479,7 +479,7 @@ def simulationProcess2( sumoMap, ignore = []):
     controller_q = msg_q.MessageQueue(15.5)
     sumo_q = msg_q.MessageQueue(15.5)
     #test.debug()
-    for step in range(50000):
+    for step in range(72000):
         traci.simulationStep()
         if step % 5 == 0:
             controller_q.step_run(5)
@@ -500,7 +500,7 @@ def simulationProcess2( sumoMap, ignore = []):
                 controller_q.add_msg(cmsg)
             res = test.nextClockTick(i)
             ltState = phaseCodes[i][res]
-            smsg = msg_q.SumoMessage('tl' + i[10:], ltState)
+            smsg = msg_q.SumoMessage('tl' + i[10:], ltState, step)
             sumo_q.add_msg(smsg)
 
 
