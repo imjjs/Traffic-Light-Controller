@@ -437,9 +437,10 @@ def simulationProcess(paraList, sumoMap, player, ignore = None):
     sumo_q = msg_q.MessageQueue(15.5)
     for step in range(72000):
         traci.simulationStep()
+        if step % 5 == 0:
+            controller_q.step_run(5)
         if not step % increment == 0:
             continue
-        controller_q.step_run(increment)
         sumo_q.step_run(increment)
         for i in selected_intersections:
             sensors = intersection_info[i]['sensors']
@@ -466,6 +467,7 @@ def simulationProcess(paraList, sumoMap, player, ignore = None):
     #return  durationAndDistance(port)
 
 def simulationProcess2( sumoMap, ignore = None):
+    increment = 10
     port = generator_ports()
     sumoProcess = subprocess.Popen(
         ["sumo", "-c", sumoMap, "--tripinfo-output", "tripinfo" + str(port) + ".xml",
@@ -474,11 +476,16 @@ def simulationProcess2( sumoMap, ignore = None):
 
     traci.init(port)
     test.test_init()
-    test.debug()
-    for s in range(50000):
+    controller_q = msg_q.MessageQueue(15.5)
+    sumo_q = msg_q.MessageQueue(15.5)
+    #test.debug()
+    for step in range(50000):
         traci.simulationStep()
-        if not s % 10 == 0:
+        if step % 5 == 0:
+            controller_q.step_run(5)
+        if not step % increment == 0:
             continue
+        sumo_q.step_run(increment)
         for i in selected_intersections:
             sensors = intersection_info[i]['sensors']
             for s in sensors:
@@ -489,10 +496,12 @@ def simulationProcess2( sumoMap, ignore = None):
                 #     data += traci.areal.getLastStepVehicleNumber(s + '#' + str(t))
                 data = traci.multientryexit.getLastStepVehicleNumber(s)
                 #print "data:" + str(data) + ', sensor:' + str(s)
-                test.handleTrafficSensorInput(s, data, i)
+                cmsg = msg_q.ControllerMessage(i, s, data, step, test)
+                controller_q.add_msg(cmsg)
             res = test.nextClockTick(i)
             ltState = phaseCodes[i][res]
-            traci.trafficlights.setRedYellowGreenState('tl' + i[10:], ltState)
+            smsg = msg_q.SumoMessage('tl' + i[10:], ltState)
+            sumo_q.add_msg(smsg)
 
 
     traci.close()

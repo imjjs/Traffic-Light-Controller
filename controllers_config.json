@@ -1,414 +1,342 @@
 {
-  "Controller202270699": {
-    "PhaseDescriptor": {
-      "0": {
-        "threshold": 12,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "0110"
-      },
-      "1": {
-        "threshold": 12,
-        "maxInterval": 50,
+    "Controller202514078": {
+        "phases": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+        ],
         "minInterval": 50,
-        "flows": "0110"
-      },
-      "2": {
-        "threshold": 12,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "0110"
-      },
-      "3": {
-        "threshold": 12,
         "maxInterval": 50,
-        "minInterval": 50,
-        "flows": "0000"
-      },
-      "4": {
-        "threshold": 12,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "1001"
-      },
-      "5": {
-        "threshold": 12,
-        "maxInterval": 50,
-        "minInterval": 50,
-        "flows": "1001"
-      },
-      "6": {
-        "threshold": 12,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "1001"
-      },
-      "7": {
-        "threshold": 12,
-        "maxInterval": 50,
-        "minInterval": 50,
-        "flows": "0000"
-      }
+        "threshold": 3,
+        "sensors": [
+            "S13",
+            "S14",
+            "S12",
+            "S15"
+        ],
+        "PhaseDescriptor": {
+            "1": {
+                "threshold": 12,
+                "maxInterval": 50,
+                "minInterval": 50,
+                "flows": "1010"
+            },
+            "0": {
+                "threshold": 13,
+                "maxInterval": 600,
+                "minInterval": 200,
+                "flows": "1010"
+            },
+            "3": {
+                "threshold": 12,
+                "maxInterval": 50,
+                "minInterval": 50,
+                "flows": "0000"
+            },
+            "2": {
+                "threshold": 0,
+                "maxInterval": 600,
+                "minInterval": 200,
+                "flows": "1010"
+            },
+            "5": {
+                "threshold": 12,
+                "maxInterval": 50,
+                "minInterval": 50,
+                "flows": "0101"
+            },
+            "4": {
+                "threshold": 26,
+                "maxInterval": 600,
+                "minInterval": 200,
+                "flows": "0101"
+            },
+            "7": {
+                "threshold": 12,
+                "maxInterval": 50,
+                "minInterval": 50,
+                "flows": "0000"
+            },
+            "6": {
+                "threshold": 8,
+                "maxInterval": 600,
+                "minInterval": 200,
+                "flows": "0101"
+            }
+        }
     },
-    "maxInterval": 50,
-    "minInterval": 50,
-    "phases": [
-      "0",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7"
-    ],
-    "sensors": [
-      "S18",
-      "S16",
-      "S17",
-      "S19"
-    ],
-    "threshold1": 3,
-    "threshold2": 4
-  },
-  "Controller202514078": {
-    "phases": [
-      "0",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7"
-    ],
-    "minInterval": 50,
-    "maxInterval": 50,
-    "threshold": 3,
-    "sensors": [
-      "S13",
-      "S14",
-      "S12",
-      "S15"
-    ],
-    "PhaseDescriptor": {
-      "1": {
-        "threshold": 12,
-        "maxInterval": 50,
+    "Controller1443088096": {
+        "phases": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+        ],
         "minInterval": 50,
-        "flows": "1010"
-      },
-      "0": {
-        "threshold": 7,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "1010"
-      },
-      "3": {
-        "threshold": 12,
         "maxInterval": 50,
-        "minInterval": 50,
-        "flows": "0000"
-      },
-      "2": {
         "threshold": 3,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "1010"
-      },
-      "5": {
-        "threshold": 12,
-        "maxInterval": 50,
+        "sensors": [
+            "S32",
+            "S33",
+            "S34",
+            "S35"
+        ],
+        "PhaseDescriptor": {
+            "1": {
+                "threshold": 12,
+                "maxInterval": 50,
+                "minInterval": 50,
+                "flows": "1100"
+            },
+            "0": {
+                "threshold": 1,
+                "maxInterval": 600,
+                "minInterval": 200,
+                "flows": "1100"
+            },
+            "3": {
+                "threshold": 12,
+                "maxInterval": 50,
+                "minInterval": 50,
+                "flows": "0000"
+            },
+            "2": {
+                "threshold": 0,
+                "maxInterval": 600,
+                "minInterval": 200,
+                "flows": "1100"
+            },
+            "5": {
+                "threshold": 12,
+                "maxInterval": 50,
+                "minInterval": 50,
+                "flows": "0001"
+            },
+            "4": {
+                "threshold": 0,
+                "maxInterval": 600,
+                "minInterval": 200,
+                "flows": "1011"
+            },
+            "7": {
+                "threshold": 12,
+                "maxInterval": 50,
+                "minInterval": 50,
+                "flows": "0000"
+            },
+            "6": {
+                "threshold": 0,
+                "maxInterval": 600,
+                "minInterval": 200,
+                "flows": "0001"
+            }
+        }
+    },
+    "Controller202407913": {
+        "phases": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
         "minInterval": 50,
-        "flows": "0101"
-      },
-      "4": {
-        "threshold": 19,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "0101"
-      },
-      "7": {
-        "threshold": 12,
         "maxInterval": 50,
-        "minInterval": 50,
-        "flows": "0000"
-      },
-      "6": {
-        "threshold": 18,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "0101"
-      }
-    }
-  },
-  "Controller1443088096": {
-    "phases": [
-      "0",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7"
-    ],
-    "minInterval": 50,
-    "maxInterval": 50,
-    "threshold": 3,
-    "sensors": [
-      "S32",
-      "S33",
-      "S34",
-      "S35"
-    ],
-    "PhaseDescriptor": {
-      "1": {
-        "threshold": 12,
-        "maxInterval": 50,
-        "minInterval": 50,
-        "flows": "1100"
-      },
-      "0": {
-        "threshold": 1,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "1100"
-      },
-      "3": {
-        "threshold": 12,
-        "maxInterval": 50,
-        "minInterval": 50,
-        "flows": "0000"
-      },
-      "2": {
-        "threshold": 0,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "1100"
-      },
-      "5": {
-        "threshold": 12,
-        "maxInterval": 50,
-        "minInterval": 50,
-        "flows": "0001"
-      },
-      "4": {
-        "threshold": 0,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "1011"
-      },
-      "7": {
-        "threshold": 12,
-        "maxInterval": 50,
-        "minInterval": 50,
-        "flows": "0000"
-      },
-      "6": {
-        "threshold": 9,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "0001"
-      }
-    }
-  },
-  "Controller202407913": {
-    "phases": [
-      "0",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5"
-    ],
-    "minInterval": 50,
-    "maxInterval": 50,
-    "threshold": 3,
-    "sensors": [
-      "S11",
-      "S10",
-      "S9"
-    ],
-    "PhaseDescriptor": {
-      "1": {
-        "threshold": 12,
-        "maxInterval": 50,
-        "minInterval": 50,
-        "flows": "011"
-      },
-      "0": {
-        "threshold": 0,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "011"
-      },
-      "3": {
-        "threshold": 12,
-        "maxInterval": 50,
-        "minInterval": 50,
-        "flows": "000"
-      },
-      "2": {
-        "threshold": 0,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "011"
-      },
-      "5": {
-        "threshold": 12,
-        "maxInterval": 50,
-        "minInterval": 50,
-        "flows": "000"
-      },
-      "4": {
-        "threshold": 27,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "100"
-      }
-    }
-  },
-  "Controller1443088101": {
-    "phases": [
-      "0",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7"
-    ],
-    "minInterval": 50,
-    "maxInterval": 50,
-    "threshold": 3,
-    "sensors": [
-      "S1",
-      "S2",
-      "S4",
-      "S3"
-    ],
-    "PhaseDescriptor": {
-      "1": {
-        "threshold": 12,
-        "maxInterval": 50,
-        "minInterval": 50,
-        "flows": "1100"
-      },
-      "0": {
-        "threshold": 22,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "1100"
-      },
-      "3": {
-        "threshold": 12,
-        "maxInterval": 50,
-        "minInterval": 50,
-        "flows": "0000"
-      },
-      "2": {
-        "threshold": 1,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "1100"
-      },
-      "5": {
-        "threshold": 12,
-        "maxInterval": 50,
-        "minInterval": 50,
-        "flows": "0011"
-      },
-      "4": {
-        "threshold": 23,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "0011"
-      },
-      "7": {
-        "threshold": 12,
-        "maxInterval": 50,
-        "minInterval": 50,
-        "flows": "0000"
-      },
-      "6": {
-        "threshold": 11,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "0011"
-      }
-    }
-  },
-  "Controller3010263944": {
-    "phases": [
-      "0",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7"
-    ],
-    "minInterval": 50,
-    "maxInterval": 50,
-    "threshold": 3,
-    "sensors": [
-      "S24",
-      "S25",
-      "S27",
-      "S26"
-    ],
-    "PhaseDescriptor": {
-      "1": {
-        "threshold": 12,
-        "maxInterval": 50,
-        "minInterval": 50,
-        "flows": "1100"
-      },
-      "0": {
-        "threshold": 28,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "1100"
-      },
-      "3": {
-        "threshold": 12,
-        "maxInterval": 50,
-        "minInterval": 50,
-        "flows": "0000"
-      },
-      "2": {
-        "threshold": 4,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "1100"
-      },
-      "5": {
-        "threshold": 12,
-        "maxInterval": 50,
-        "minInterval": 50,
-        "flows": "0011"
-      },
-      "4": {
-        "threshold": 0,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "0011"
-      },
-      "7": {
-        "threshold": 12,
-        "maxInterval": 50,
-        "minInterval": 50,
-        "flows": "0000"
-      },
-      "6": {
         "threshold": 3,
-        "maxInterval": 600,
-        "minInterval": 200,
-        "flows": "0011"
-      }
+        "sensors": [
+            "S11",
+            "S10",
+            "S9"
+        ],
+        "PhaseDescriptor": {
+            "1": {
+                "threshold": 12,
+                "maxInterval": 50,
+                "minInterval": 50,
+                "flows": "011"
+            },
+            "0": {
+                "threshold": 5,
+                "maxInterval": 600,
+                "minInterval": 200,
+                "flows": "011"
+            },
+            "3": {
+                "threshold": 12,
+                "maxInterval": 50,
+                "minInterval": 50,
+                "flows": "000"
+            },
+            "2": {
+                "threshold": 0,
+                "maxInterval": 600,
+                "minInterval": 200,
+                "flows": "011"
+            },
+            "5": {
+                "threshold": 12,
+                "maxInterval": 50,
+                "minInterval": 50,
+                "flows": "000"
+            },
+            "4": {
+                "threshold": 17,
+                "maxInterval": 600,
+                "minInterval": 200,
+                "flows": "100"
+            }
+        }
+    },
+    "Controller1443088101": {
+        "phases": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+        ],
+        "minInterval": 50,
+        "maxInterval": 50,
+        "threshold": 3,
+        "sensors": [
+            "S1",
+            "S2",
+            "S4",
+            "S3"
+        ],
+        "PhaseDescriptor": {
+            "1": {
+                "threshold": 12,
+                "maxInterval": 50,
+                "minInterval": 50,
+                "flows": "1100"
+            },
+            "0": {
+                "threshold": 26,
+                "maxInterval": 600,
+                "minInterval": 200,
+                "flows": "1100"
+            },
+            "3": {
+                "threshold": 12,
+                "maxInterval": 50,
+                "minInterval": 50,
+                "flows": "0000"
+            },
+            "2": {
+                "threshold": 1,
+                "maxInterval": 600,
+                "minInterval": 200,
+                "flows": "1100"
+            },
+            "5": {
+                "threshold": 12,
+                "maxInterval": 50,
+                "minInterval": 50,
+                "flows": "0011"
+            },
+            "4": {
+                "threshold": 20,
+                "maxInterval": 600,
+                "minInterval": 200,
+                "flows": "0011"
+            },
+            "7": {
+                "threshold": 12,
+                "maxInterval": 50,
+                "minInterval": 50,
+                "flows": "0000"
+            },
+            "6": {
+                "threshold": 0,
+                "maxInterval": 600,
+                "minInterval": 200,
+                "flows": "0011"
+            }
+        }
+    },
+    "Controller3010263944": {
+        "phases": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+        ],
+        "minInterval": 50,
+        "maxInterval": 50,
+        "threshold": 3,
+        "sensors": [
+            "S24",
+            "S25",
+            "S27",
+            "S26"
+        ],
+        "PhaseDescriptor": {
+            "1": {
+                "threshold": 12,
+                "maxInterval": 50,
+                "minInterval": 50,
+                "flows": "1100"
+            },
+            "0": {
+                "threshold": 3,
+                "maxInterval": 600,
+                "minInterval": 200,
+                "flows": "1100"
+            },
+            "3": {
+                "threshold": 12,
+                "maxInterval": 50,
+                "minInterval": 50,
+                "flows": "0000"
+            },
+            "2": {
+                "threshold": 7,
+                "maxInterval": 600,
+                "minInterval": 200,
+                "flows": "1100"
+            },
+            "5": {
+                "threshold": 12,
+                "maxInterval": 50,
+                "minInterval": 50,
+                "flows": "0011"
+            },
+            "4": {
+                "threshold": 19,
+                "maxInterval": 600,
+                "minInterval": 200,
+                "flows": "0011"
+            },
+            "7": {
+                "threshold": 12,
+                "maxInterval": 50,
+                "minInterval": 50,
+                "flows": "0000"
+            },
+            "6": {
+                "threshold": 0,
+                "maxInterval": 600,
+                "minInterval": 200,
+                "flows": "0011"
+            }
+        }
     }
-  }
 }
