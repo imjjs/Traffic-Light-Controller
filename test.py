@@ -466,7 +466,7 @@ def simulationProcess(paraList, sumoMap, player, ignore = None):
     return submapUtility(port, player)
     #return  durationAndDistance(port)
 
-def simulationProcess2( sumoMap, ignore = None):
+def simulationProcess2( sumoMap, ignore = []):
     increment = 10
     port = generator_ports()
     sumoProcess = subprocess.Popen(
@@ -511,15 +511,4 @@ def simulationProcess2( sumoMap, ignore = None):
     return  durationAndDistance(port)
 
 if __name__ == '__main__':
-    #simulationProcess([0,5], '../sumo/Vanderbilt.sumo.cfg')
-    ignore = config.ignore_sensors
-    #print sys.argv[1]
-    if len(sys.argv) == 5:
-        ignore = ast.literal_eval(sys.argv[4])
-    raw_para = sys.argv[1]
-    para = ast.literal_eval(raw_para)
-    if len(sys.argv) >= 4:
-        print  simulationProcess(para, sumoMap = sys.argv[2], player = sys.argv[3], ignore = ignore)
-    else:
-        print  simulationProcess(para, sumoMap = './sumo/Vanderbilt.sumo.cfg', player = 'global', ignore = ignore)
-    #print  simulationProcess([0,5,2,3,7,4,1,6,4,9], './sumo/Vanderbilt.sumo.cfg')
+    print  simulationProcess2(sumoMap = './sumo/Vanderbilt.sumo.cfg')
