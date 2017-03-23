@@ -22,7 +22,7 @@ except ImportError:
 PORT_LOCK = Lock()
 DEVNULL = open(os.devnull, "w")
 
-selected_intersections =  ["Controller202407913" , "Controller1443088096", "Controller202514078", "Controller3010263944", "Controller1443088101", "Controller202270699"];
+selected_intersections =  ["Controller202407913" , "Controller1443088096", "Controller202514078", "Controller3010263944", "Controller1443088101"];
 phaseCodes = {
 "Controller202407913":["GGGggGGGGgrrrr", "yyyggyyyygrrrr", "rrrGGrrrrGrrrr", "rrryyrrrryrrrr", "rrrrrrrrrrGGGG", "rrrrrrrrrryyyy"],
 "Controller1443088096":["GGGGggrrGGGGggrrrr", "yyyyggrryyyyggrrrr", "rrrrGGrrrrrrGGrrrr", "rrrryyrrrrrryyrrrr", "GrrrrrGGrrrrrrGGgg", "yrrrrryyrrrrrryygg", "rrrrrrrrrrrrrrrrGG", "rrrrrrrrrrrrrrrryy"],
@@ -379,8 +379,8 @@ import submap
 def submapUtility(port, name):
     maps = submap.Submap.generate_submaps(os.path.join('submap', config.submap_region))
     distance, avg = submap.get_matric(maps, 'dump' + str(port) +'.xml')
-    os.remove('dump' + str(port) +'.xml')
-    os.remove('tripinfo' + str(port) + '.xml')
+    #os.remove('dump' + str(port) +'.xml')
+    #os.remove('tripinfo' + str(port) + '.xml')
     #f = open("utility"+str(port)+".txt","w")
     #f.write(str(avg) + '\n' + str(distance))
     if 'global' == name:
@@ -435,7 +435,7 @@ def simulationProcess(paraList, sumoMap, player, ignore = None):
     #print "after seeting threshold"
     controller_q = msg_q.MessageQueue(15.5)
     sumo_q = msg_q.MessageQueue(15.5)
-    for step in range(10000):
+    for step in range(72000):
         traci.simulationStep()
         if not step % increment == 0:
             continue
