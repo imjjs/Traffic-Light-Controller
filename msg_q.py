@@ -19,11 +19,11 @@ class MessageQueue(object):
     def step_run(self, increment):
         self.time += increment
         delete = []
-        print "__current time__:", float(self.time)/10
+       # print "__current time__:", float(self.time)/10
         for ele in self.data:
             if self.time - ele.time_stamp() > self.delay:
                 ele.emit()
-                ele.debug()
+        #        ele.debug()
                 delete.append(ele)
         for ele in delete:
             self.data.remove(ele)

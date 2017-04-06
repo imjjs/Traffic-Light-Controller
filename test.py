@@ -470,7 +470,7 @@ def simulationProcess2( sumoMap, ignore = []):
     increment = 10
     port = generator_ports()
     sumoProcess = subprocess.Popen(
-        ["sumo", "-c", sumoMap, "--tripinfo-output", "tripinfo" + str(port) + ".xml",
+        ["sumo-gui", "-c", sumoMap, "--tripinfo-output", "tripinfo" + str(port) + ".xml",
          "--remote-port", str(port)], stdout= DEVNULL, stderr = DEVNULL)
     time.sleep(10)
 

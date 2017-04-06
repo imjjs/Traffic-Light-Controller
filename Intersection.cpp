@@ -197,6 +197,8 @@ std::string Intersection::run() {
 		keepState();
 		clock += 10;
 	}
+	if("Controller1443088101" == name)
+	    print();
 	return states[currentStateIdx].phase;
 }
 
@@ -212,6 +214,8 @@ std::string Intersection::run(double _current_time) {
 		clock += (_current_time - currentTime)*10;
 	}
 	currentTime = _current_time;
+	std::cout<<name<<std::endl;
+
 	return states[currentStateIdx].phase;
 }
 
