@@ -52,6 +52,7 @@ def find_opt(para, filter, name, iter, secnario):
     meta_param = test.findPhase()
     idx = 0
     mark_opt = False
+    opt_solution = 0.0
     while mark_opt == False:
         mark_opt = True
         for idx in range(dim):
@@ -82,15 +83,15 @@ def find_opt(para, filter, name, iter, secnario):
 
             # minDuration, minWeThreshold, minNsThreshold = min(result, key = lambda x: x[0])
             # f.write("final:"+ str(minDuration) + ',' + str(minWeThreshold) + ',' + str(minNsThreshold))
-            if paraList[idx] != maxThreshold:
+            if maxSpeed - opt_solution > 0.001:
                 print "paraList[idx]:", paraList[idx]
                 print "maxThreshold:", maxThreshold
                 print "mark_opt == False"
                 mark_opt = False
+                paraList[idx] = maxThreshold
             else:
                 print "mark unchanged:",mark_opt
 
-            paraList[idx] = maxThreshold
             f.flush()
             time.sleep(10)
             print "sleeping at loot--------"

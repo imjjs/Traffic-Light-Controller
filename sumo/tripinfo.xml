@@ -1,34 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 8/23/2016 1:13:59 PM by SUMO gui Version 0.24.0
+<!-- generated on 4/6/2017 3:09:09 PM by SUMO gui Version 0.29.0
 <?xml version="1.0" encoding="UTF-8"?>
 
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumo-gui.exeConfiguration.xsd">
 
     <input>
-        <net-file value="C:\Users\yli\Documents\sumo\SURE_C2WT\scenarios\HierarchicalControllers\models\sumo\Vanderbilt.net.xml"/>
-        <route-files value="C:\Users\yli\Documents\sumo\SURE_C2WT\scenarios\HierarchicalControllers\models\sumo\morning.traffic.xml"/>
-        <additional-files value="C:\Users\yli\Documents\sumo\SURE_C2WT\scenarios\HierarchicalControllers\models\sumo\detectors.xml"/>
+        <net-file value="C:\Users\yli\Dropbox\sure\new_controllor\sumo\osm.net.xml"/>
+        <route-files value="C:\Users\yli\Dropbox\sure\new_controllor\sumo\osm.passenger.trips.xml,C:\Users\yli\Dropbox\sure\new_controllor\sumo\osm.truck.trips.xml"/>
+        <additional-files value="C:\Users\yli\Dropbox\sure\new_controllor\sumo\detectors.xml"/>
     </input>
 
     <output>
-        <tripinfo-output value="C:\Users\yli\Documents\sumo\SURE_C2WT\scenarios\HierarchicalControllers\models\sumo\tripinfo.xml"/>
-        <save-state.prefix value="C:\Users\yli\Documents\sumo\SURE_C2WT\scenarios\HierarchicalControllers\models\sumo\state"/>
+        <tripinfo-output value="C:\Users\yli\Dropbox\sure\new_controllor\sumo\tripinfo.xml"/>
     </output>
 
     <time>
         <begin value="0"/>
-        <end value="7200"/>
+        <end value="3600"/>
         <step-length value="0.1"/>
     </time>
 
     <processing>
         <time-to-teleport value="7200"/>
     </processing>
-
-    <emissions>
-        <phemlight-path value="C:\Users\yli\Documents\sumo\SURE_C2WT\scenarios\HierarchicalControllers\models\sumo\./PHEMlight/"/>
-    </emissions>
 
 </configuration>
 -->
