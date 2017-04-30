@@ -54,6 +54,7 @@ def find_opt(para, filter, name, iter, secnario):
     mark_opt = False
     while mark_opt == False:
         mark_opt = True
+        optimum = 0.0
         for idx in range(dim):
             # if not meta_param[idx].controller in config.blue:
             #    continue
@@ -82,15 +83,16 @@ def find_opt(para, filter, name, iter, secnario):
 
             # minDuration, minWeThreshold, minNsThreshold = min(result, key = lambda x: x[0])
             # f.write("final:"+ str(minDuration) + ',' + str(minWeThreshold) + ',' + str(minNsThreshold))
-            if paraList[idx] != maxThreshold:
+            if  maxSpeed - optimum > 0.001:
+                print "current opt:", optimum
+                optimum = maxSpeed
+                paraList[idx] = maxThreshold
                 print "paraList[idx]:", paraList[idx]
                 print "maxThreshold:", maxThreshold
                 print "mark_opt == False"
                 mark_opt = False
             else:
                 print "mark unchanged:",mark_opt
-
-            paraList[idx] = maxThreshold
             f.flush()
             time.sleep(10)
             print "sleeping at loot--------"
@@ -120,7 +122,7 @@ if __name__ == '__main__':
         'global' : isGloable,
     }
 
-    para = (0, 3, 11, 1, 1, 0, 13, 6, 3, 0, 0, 20, 22, 13, 0, 6, 0, 15, 0, 0, 0, 13, 0)
+    para = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 #(1, 0, 9, 1, 0, 0, 25, 15, 14, 5, 8, 0, 0, 18, 0, 10, 1, 20, 0, 0, 0, 0, 0)
     #para = (3, 0, 9, 1, 0, 0, 10, 7, 0, 6, 5, 5, 0, 12, 0, 20, 0, 14, 0)
     players = ['blue', 'red']    #, 'orange']
@@ -130,7 +132,7 @@ if __name__ == '__main__':
     while False == mark_equilibrium:
         mark_equilibrium = True
         for p in players:
-            new_para = tuple(find_opt(para, filters[p], p, i, 'night'))
+            new_para = tuple(find_opt(para, filters[p], p, i, 'rand'))
             if new_para != para:
                 mark_equilibrium = False
             para = new_para
