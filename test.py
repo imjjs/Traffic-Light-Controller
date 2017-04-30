@@ -377,9 +377,9 @@ def durationAndDistance(port):
 import submap
 def submapUtility(port, name):
     maps = submap.Submap.generate_submaps(os.path.join('submap', config.submap_region))
-    distance, avg = submap.get_matric(maps, 'dump' + str(port) +'.xml')
-    os.remove('dump' + str(port) +'.xml')
-    os.remove('tripinfo' + str(port) + '.xml')
+    distance, avg = submap.get_matric(maps, str(port) +'edge_info.xml')
+    #os.remove(str(port) + 'edge_info.xml')
+    #os.remove(str(port) + 'tripinfo.xml')
     #f = open("utility"+str(port)+".txt","w")
     #f.write(str(avg) + '\n' + str(distance))
     if 'global' == name:
@@ -413,8 +413,8 @@ def findSensors():
 def simulationProcess(paraList, sumoMap, player, ignore = None):
     port = generator_ports()
     sumoProcess = subprocess.Popen(
-        ["sumo", "-c", sumoMap, "--tripinfo-output", "tripinfo" + str(port) + ".xml", "--netstate-dump", "dump" + str(port) + ".xml",
-         "--remote-port", str(port)], stdout= DEVNULL, stderr = DEVNULL)
+        ["sumo", "-c", sumoMap, "--tripinfo-output", "tripinfo.xml",
+         "--remote-port", str(port), "--output-prefix", str(port)], stdout= DEVNULL, stderr = DEVNULL)
     time.sleep(10)
 
     traci.init(port)
@@ -461,8 +461,8 @@ def simulationProcess(paraList, sumoMap, player, ignore = None):
 def simulationProcess2( sumoMap, ignore = None):
     port = generator_ports()
     sumoProcess = subprocess.Popen(
-        ["sumo", "-c", sumoMap, "--tripinfo-output", "tripinfo" + str(port) + ".xml",
-         "--remote-port", str(port)], stdout= DEVNULL, stderr = DEVNULL)
+        ["sumo", "-c", sumoMap, "--tripinfo-output", "tripinfo.xml",
+         "--remote-port", str(port), "--output-prefix", str(port)], stdout= DEVNULL, stderr = DEVNULL)
     time.sleep(10)
 
     traci.init(port)

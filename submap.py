@@ -50,13 +50,9 @@ def get_matric(maps, dumpfile):
             for m in maps:
                 if m.in_this_map(node.attrib['id']):
                     map_id = m.name
+                    distance[m.name] += float(node.attrib['speed']) * float(node.attrib['sampledSeconds'])
+                    time[m.name] += float(node.attrib['sampledSeconds'])
                     break
-        elif event == 'start' and node.tag == 'vehicle':
-            assert not map_id == None
-            speed = float(node.attrib['speed'])
-            time[map_id] += 1
-            distance[map_id] += speed
-
         elif event == 'end' and node.tag == 'edge':
             map_id = None
 

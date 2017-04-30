@@ -1,4 +1,5 @@
 <additional>
+	      <edgeData id="1" file="../edge_info.xml" excludeEmpty="true" end="2500"/>
 	<!--
 	<inductionLoop id="loop1a" lane="19479801#0_0" pos="16.5" freq="120" file="NUL"/>
 	<inductionLoop id="loop1b" lane="19479801#0_1" pos="16.5" freq="120" file="NUL"/>
