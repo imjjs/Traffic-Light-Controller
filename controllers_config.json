@@ -3,7 +3,7 @@
     "PhaseDescriptor": {
       "0": {
         "threshold": 12,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "0110"
       },
@@ -15,7 +15,7 @@
       },
       "2": {
         "threshold": 12,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "0110"
       },
@@ -27,7 +27,7 @@
       },
       "4": {
         "threshold": 12,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "1001"
       },
@@ -39,7 +39,7 @@
       },
       "6": {
         "threshold": 12,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "1001"
       },
@@ -100,7 +100,7 @@
       },
       "0": {
         "threshold": 7,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "1010"
       },
@@ -112,7 +112,7 @@
       },
       "2": {
         "threshold": 3,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "1010"
       },
@@ -124,7 +124,7 @@
       },
       "4": {
         "threshold": 19,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "0101"
       },
@@ -136,7 +136,7 @@
       },
       "6": {
         "threshold": 18,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "0101"
       }
@@ -171,7 +171,7 @@
       },
       "0": {
         "threshold": 1,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "1100"
       },
@@ -183,7 +183,7 @@
       },
       "2": {
         "threshold": 0,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "1100"
       },
@@ -195,7 +195,7 @@
       },
       "4": {
         "threshold": 0,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "1011"
       },
@@ -207,7 +207,7 @@
       },
       "6": {
         "threshold": 9,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "0001"
       }
@@ -239,7 +239,7 @@
       },
       "0": {
         "threshold": 0,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "011"
       },
@@ -251,7 +251,7 @@
       },
       "2": {
         "threshold": 0,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "011"
       },
@@ -263,7 +263,7 @@
       },
       "4": {
         "threshold": 27,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "100"
       }
@@ -298,7 +298,7 @@
       },
       "0": {
         "threshold": 22,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "1100"
       },
@@ -310,7 +310,7 @@
       },
       "2": {
         "threshold": 1,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "1100"
       },
@@ -322,7 +322,7 @@
       },
       "4": {
         "threshold": 23,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "0011"
       },
@@ -334,7 +334,7 @@
       },
       "6": {
         "threshold": 11,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "0011"
       }
@@ -369,7 +369,7 @@
       },
       "0": {
         "threshold": 28,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "1100"
       },
@@ -381,7 +381,7 @@
       },
       "2": {
         "threshold": 4,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "1100"
       },
@@ -393,7 +393,7 @@
       },
       "4": {
         "threshold": 0,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "0011"
       },
@@ -405,7 +405,7 @@
       },
       "6": {
         "threshold": 3,
-        "maxInterval": 600,
+        "maxInterval": 1200,
         "minInterval": 200,
         "flows": "0011"
       }
