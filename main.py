@@ -120,17 +120,17 @@ if __name__ == '__main__':
         'global' : isGloable,
     }
 
-    para = (2, 0, 3, 1, 0, 3, 29, 9, 11, 13, 0, 4, 0, 15, 0, 0, 1, 14, 0, 0, 0, 0, 0)
+    para = (0, 3, 11, 1, 1, 0, 13, 6, 3, 0, 0, 20, 22, 13, 0, 6, 0, 15, 0, 0, 0, 13, 0)
 #(1, 0, 9, 1, 0, 0, 25, 15, 14, 5, 8, 0, 0, 18, 0, 10, 1, 20, 0, 0, 0, 0, 0)
     #para = (3, 0, 9, 1, 0, 0, 10, 7, 0, 6, 5, 5, 0, 12, 0, 20, 0, 14, 0)
-    #players = ['blue', 'red']    #, 'orange']
-    players = ['global']
+    players = ['blue', 'red']    #, 'orange']
+    #players = ['global']
     i = 0
     mark_equilibrium = False
     while False == mark_equilibrium:
         mark_equilibrium = True
         for p in players:
-            new_para = tuple(find_opt(para, filters[p], p, i, 'morning'))
+            new_para = tuple(find_opt(para, filters[p], p, i, 'night'))
             if new_para != para:
                 mark_equilibrium = False
             para = new_para
