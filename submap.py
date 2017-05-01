@@ -50,8 +50,9 @@ def get_matric(maps, dumpfile):
             for m in maps:
                 if m.in_this_map(node.attrib['id']):
                     map_id = m.name
-                    distance[m.name] += float(node.attrib['speed']) * float(node.attrib['sampledSeconds'])
-                    time[m.name] += float(node.attrib['sampledSeconds'])
+                    distance[m.name] += - float(node.attrib['speed']) * float(node.attrib['density'])/3.6
+                                        #float(node.attrib['sampledSeconds'])
+                    #time[m.name] += float(node.attrib['sampledSeconds'])
                     break
         elif event == 'end' and node.tag == 'edge':
             map_id = None
@@ -64,9 +65,9 @@ def get_matric(maps, dumpfile):
     g_time = 0
     for k in distance.keys():
         g_distance += distance[k]
-        g_time += time[k]
-        distance[k] = distance[k]/time[k]
-    return distance, g_distance/g_time
+        #g_time += time[k]
+        #distance[k] = distance[k]/time[k]
+    return distance, g_distance
 
 if __name__ == '__main__':
     maps = Submap.generate_submaps(os.path.join('submap','map.regions3.json'))
