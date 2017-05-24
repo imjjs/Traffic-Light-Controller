@@ -1,0 +1,16 @@
+{
+    "controller202514074":{
+        "PhaseToState":{
+            "GGGggrrrrGGGggrrrr": "1010",
+            "rrrGGrrrrrrrGGrrrr": "1010",
+            "rrrrrGGggrrrrrGGgg": "0101",
+            "rrrrrrrGGrrrrrrrGG":"0101"
+        },
+        "sensors":["S1", "S3", "S2", "S4"],
+        "phases":["GGGggrrrrGGGggrrrr", "rrrGGrrrrrrrGGrrrr","rrrrrGGggrrrrrGGgg","rrrrrrrGGrrrrrrrGG"],
+        "minInterval":[200,200,200,200],
+        "maxInterval":[600,600,600,600],
+        "threshold1" :[3,3,3,3],
+        "threshold2" :[4,4,4,4]
+    }
+}

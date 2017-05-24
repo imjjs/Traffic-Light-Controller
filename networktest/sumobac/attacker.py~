@@ -1,0 +1,7 @@
+import test
+
+if __name__ == '__main__':
+    sensors = test.findSensors()
+    ret = []
+    for s in sensors:
+        

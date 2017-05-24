@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 5/24/2017 4:40:03 AM by SUMO gui Version 0.29.0
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumo-gui.exeConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\yli\Dropbox\sure\networktest\sumo\grid.net.xml"/>
+        <route-files value="C:\Users\yli\Dropbox\sure\networktest\sumo\new_test.xml"/>
+        <additional-files value="C:\Users\yli\Dropbox\sure\networktest\sumo\e3.add.xml"/>
+    </input>
+
+    <output>
+        <tripinfo-output value="C:\Users\yli\Dropbox\sure\networktest\sumo\tripinfo.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+        <step-length value="0.1"/>
+    </time>
+
+    <processing>
+        <time-to-teleport value="3600"/>
+    </processing>
+
+</configuration>

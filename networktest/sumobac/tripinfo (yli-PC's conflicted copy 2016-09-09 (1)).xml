@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 9/9/2016 1:35:55 AM by SUMO gui Version 0.24.0
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumo-gui.exeConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\yli\Dropbox\sure\sumoc++\sumo\Vanderbilt.net.xml"/>
+        <route-files value="C:\Users\yli\Dropbox\sure\sumoc++\sumo\morning.traffic.xml"/>
+        <additional-files value="C:\Users\yli\Dropbox\sure\sumoc++\sumo\detectors.xml"/>
+    </input>
+
+    <output>
+        <tripinfo-output value="C:\Users\yli\Dropbox\sure\sumoc++\sumo\tripinfo.xml"/>
+        <save-state.prefix value="C:\Users\yli\Dropbox\sure\sumoc++\sumo\state"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="7200"/>
+        <step-length value="0.1"/>
+    </time>
+
+    <processing>
+        <time-to-teleport value="7200"/>
+    </processing>
+
+    <emissions>
+        <phemlight-path value="C:\Users\yli\Dropbox\sure\sumoc++\sumo\./PHEMlight/"/>
+    </emissions>
+
+</configuration>
+-->
+
+<tripinfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tripinfo_file.xsd">
+</tripinfos>

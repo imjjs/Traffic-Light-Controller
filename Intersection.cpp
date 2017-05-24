@@ -54,7 +54,7 @@ void Intersection::loadFromJson(std::string& filename) {
 	//std::cout << "Parser finished" << std::endl;
 	if (!parsingSuccessful) {
 	    std::string parseErrorDetails = reader.getFormattedErrorMessages();
-	  //  std::cout << "Error while parsing JSON: " << parseErrorDetails << std::endl;
+	    std::cout << "Error while parsing JSON: " << parseErrorDetails << std::endl;
 		throw parseException();
 	} else {
 	    //std::cout << "Parsing was successful" << std::endl;
