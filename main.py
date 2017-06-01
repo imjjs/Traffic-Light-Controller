@@ -52,9 +52,9 @@ def find_opt(para, filter, name, iter, secnario):
     meta_param = test.findPhase()
     idx = 0
     mark_opt = False
+    optimum = - float('inf')
     while mark_opt == False:
         mark_opt = True
-        optimum = 0.0
         for idx in range(dim):
             # if not meta_param[idx].controller in config.blue:
             #    continue
@@ -83,8 +83,9 @@ def find_opt(para, filter, name, iter, secnario):
 
             # minDuration, minWeThreshold, minNsThreshold = min(result, key = lambda x: x[0])
             # f.write("final:"+ str(minDuration) + ',' + str(minWeThreshold) + ',' + str(minNsThreshold))
-            if  maxSpeed - optimum > 0.001:
+            if  maxSpeed - optimum > 10:
                 print "current opt:", optimum
+                print "outcome:", maxSpeed
                 optimum = maxSpeed
                 paraList[idx] = maxThreshold
                 print "paraList[idx]:", paraList[idx]
@@ -93,6 +94,7 @@ def find_opt(para, filter, name, iter, secnario):
                 mark_opt = False
             else:
                 print "mark unchanged:",mark_opt
+                print "current opt:", optimum
             f.flush()
             time.sleep(10)
             print "sleeping at loot--------"
@@ -122,11 +124,11 @@ if __name__ == '__main__':
         'global' : isGloable,
     }
 
-    para = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+    para = (5, 4, 6, 2, 0, 5, 25, 14, 0, 0, 0, 15, 8, 9, 5, 12, 13, 2, 0, 2, 1, 3, 3)
 #(1, 0, 9, 1, 0, 0, 25, 15, 14, 5, 8, 0, 0, 18, 0, 10, 1, 20, 0, 0, 0, 0, 0)
     #para = (3, 0, 9, 1, 0, 0, 10, 7, 0, 6, 5, 5, 0, 12, 0, 20, 0, 14, 0)
-    players = ['blue', 'red']    #, 'orange']
-    #players = ['global']
+    #players = ['red', 'blue']    #, 'orange']
+    players = ['global']
     i = 0
     mark_equilibrium = False
     while False == mark_equilibrium:

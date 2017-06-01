@@ -9,9 +9,16 @@ class Param(object):
 
 maps = ['./sumo/grid.sumo.cfg'] #, './sumo/Vanderbilt1.sumo.cfg', './sumo/Vanderbilt2.sumo.cfg']
 ignore_sensors = []
-#region2
+#region2_side
 blue = ["Controller1/2", "Controller2/2"]
 red =  ["Controller1/1", "Controller2/1"]
+#region2_diag
+#blue = ["Controller1/2", "Controller2/1"]
+#red =  ["Controller1/1", "Controller2/2"]
+
+
+
+
 
 #region3
 #red = ["Controller1443088096","Controller202514074", "Controller202514078", "Controller3010263944"]

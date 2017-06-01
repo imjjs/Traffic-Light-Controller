@@ -50,7 +50,7 @@ def get_matric(maps, dumpfile):
             for m in maps:
                 if m.in_this_map(node.attrib['id']):
                     map_id = m.name
-                    distance[m.name] += - float(node.attrib['speed']) * float(node.attrib['density'])/3.6
+                    distance[m.name] += - float(node.attrib['waitingTime'])
                                         #float(node.attrib['sampledSeconds'])
                     #time[m.name] += float(node.attrib['sampledSeconds'])
                     break

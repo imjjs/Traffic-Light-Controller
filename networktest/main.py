@@ -14,9 +14,9 @@ CoreNumber = multiprocessing.cpu_count()
 TestPeriod = 36000
 testRange = (0, 30)
 stepLength = 1
+EPS = 0.1
 
-
-dim = 23
+dim = 16
 
 def mytestWarp(tup):
     para = tup[1]
@@ -52,9 +52,9 @@ def find_opt(para, filter, name, iter, secnario):
     meta_param = test.findPhase()
     idx = 0
     mark_opt = False
+    optimum = -float('inf')
     while mark_opt == False:
         mark_opt = True
-        optimum = 0.0
         for idx in range(dim):
             # if not meta_param[idx].controller in config.blue:
             #    continue
@@ -69,7 +69,7 @@ def find_opt(para, filter, name, iter, secnario):
                 inputList.append((i, paraList, idx, name))
 
             result = pool.map(mytestWarp, inputList)
-            # result = map(mytestWarp, inputList)
+            #result = map(mytestWarp, inputList)
             pool.close()
             pool.join()
 
@@ -83,7 +83,7 @@ def find_opt(para, filter, name, iter, secnario):
 
             # minDuration, minWeThreshold, minNsThreshold = min(result, key = lambda x: x[0])
             # f.write("final:"+ str(minDuration) + ',' + str(minWeThreshold) + ',' + str(minNsThreshold))
-            if  maxSpeed - optimum > 0.001:
+            if  maxSpeed - optimum > EPS:
                 print "current opt:", optimum
                 optimum = maxSpeed
                 paraList[idx] = maxThreshold
@@ -122,11 +122,11 @@ if __name__ == '__main__':
         'global' : isGloable,
     }
 
-    para = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+    para = (29, 0, 26, 0, 8, 0, 23, 14, 27, 14, 27, 19, 24, 13, 23, 7)
 #(1, 0, 9, 1, 0, 0, 25, 15, 14, 5, 8, 0, 0, 18, 0, 10, 1, 20, 0, 0, 0, 0, 0)
     #para = (3, 0, 9, 1, 0, 0, 10, 7, 0, 6, 5, 5, 0, 12, 0, 20, 0, 14, 0)
-    players = ['blue', 'red']    #, 'orange']
-    #players = ['global']
+    #players = ['blue', 'red']    #, 'orange']
+    players = ['global']
     i = 0
     mark_equilibrium = False
     while False == mark_equilibrium:
